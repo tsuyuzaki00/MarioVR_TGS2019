@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: dongoro_model.ma
-//Last modified: Fri, Aug 16, 2019 04:47:20 PM
+//Last modified: Fri, Aug 16, 2019 05:01:33 PM
 //Codeset: 932
 requires maya "2018ff09";
 requires "stereoCamera" "10.0";
@@ -13,8 +13,8 @@ fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "DF02D7E0-459E-4906-1E31-789A63EF488E";
-	setAttr ".t" -type "double3" -2465.7668337924611 1830.1784259229282 500.43090919054384 ;
-	setAttr ".r" -type "double3" -13.112023789693206 22.037805859922756 0 ;
+	setAttr ".t" -type "double3" -2530.3435258546533 1778.7500987614824 613.05048819148203 ;
+	setAttr ".r" -type "double3" -2.3120237896933054 7.2378058599227737 2.5047668635994265e-17 ;
 	setAttr ".rp" -type "double3" -1.7763568394002505e-15 0 -7.1054273576010019e-15 ;
 	setAttr ".rpt" -type "double3" 2579.8958587767329 -1748.0779239922588 -231.98293828243811 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -22,7 +22,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v";
 	setAttr ".fl" 200;
 	setAttr ".ncp" 10;
-	setAttr ".coi" 305.65414594831975;
+	setAttr ".coi" 391.3577443744079;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1006,22 +1006,22 @@ createNode camera -n "leftShape" -p "left";
 	setAttr ".hc" -type "string" "viewSet -ls %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "4FB91364-4576-601F-AF3F-62A2465C6D9D";
+	rename -uid "F18DA69B-49CB-3576-9C49-0FADAC663DF1";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F787F4B5-44BF-D2D1-E6CF-A2A05C9E95D7";
+	rename -uid "388DD203-47D3-411D-8B44-D69FD94D9E75";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4B01FA85-425C-1532-4927-DE916713819F";
+	rename -uid "613BEC3C-44BF-19FD-1B54-D7951A31E9EE";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "20F13434-4B09-5344-D2E4-3B8D88A3655C";
+	rename -uid "277F16A3-4238-6D37-6FF9-6BA0B71AC0FE";
 	setAttr ".cdl" 3;
 	setAttr -s 5 ".dli[1:4]"  1 2 3 5;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "AD3EDF17-4879-8D59-4C8F-EB98CAF3188D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BA99C4BB-4817-B7DB-2845-078D90F3EB19";
+	rename -uid "C32A7FF4-4BBE-6A2F-C1C3-F8B99E882691";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "9EB4CC6C-471B-DA23-1A8B-BEA8CBB6D11C";
 	setAttr ".g" yes;
@@ -1090,13 +1090,14 @@ createNode script -n "sceneConfigurationScriptNode";
 createNode file -n "dangoro_normal_file";
 	rename -uid "7E6C6097-4BDE-C0CC-2CE4-DFBB11805825";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "P:/3DCG/Maya//Maya_Projects/TGS2019_model/Model/dangoro/2D/dangoro_normal.png";
+	setAttr ".ftn" -type "string" "P:/3DCG/Maya//Maya_Projects/TGS2019_model/Model/dangoro/Textures/dangoro_nm.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture1";
 	rename -uid "E250F55C-41C0-29EF-8A9F-739489ACEE21";
 createNode bump2d -n "bump2d1";
 	rename -uid "67F39986-414B-AE16-3284-5BBE202AB55C";
 	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode objectSet -n "textureEditorIsolateSelectSet";
 	rename -uid "37729252-4F15-A3CB-7F62-039251AB13C1";
@@ -1113,7 +1114,7 @@ createNode materialInfo -n "materialInfo1";
 	rename -uid "7108122B-442D-E26F-FAE6-B18B856E743E";
 createNode file -n "dangoro_color_file";
 	rename -uid "9C00F840-4788-CC63-7E93-C596D3AF9064";
-	setAttr ".ftn" -type "string" "P:/3DCG/Maya//Maya_Projects/TGS2019_model/Model/dangoro/2D/dangoro_color.png";
+	setAttr ".ftn" -type "string" "P:/3DCG/Maya//Maya_Projects/TGS2019_model/Model/dangoro/Textures/dangoro_cl.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture2";
 	rename -uid "8C10773D-418D-A6E2-027D-AEB1630D3C5D";
@@ -1123,31 +1124,31 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].vl" -type "double2" -560.71426343350277 -572.61902486521194 ;
 	setAttr ".tgi[0].vh" -type "double2" 560.71426343350277 571.42854872204111 ;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "B870724A-418B-D1A5-E047-C7B816E63E9C";
+	rename -uid "8EFDCFB5-4278-C999-F56C-F7A88D583F37";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -196.32901719741974 -724.5774454394915 ;
-	setAttr ".tgi[0].vh" -type "double2" 850.29452453517081 -45.660619192092938 ;
+	setAttr ".tgi[0].vl" -type "double2" -197.49982424286736 -726.19044733426051 ;
+	setAttr ".tgi[0].vh" -type "double2" 852.26170298687282 -45.23809344049495 ;
 	setAttr -s 7 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 97.489158630371094;
-	setAttr ".tgi[0].ni[0].y" -239.57440185546875;
+	setAttr ".tgi[0].ni[0].x" 602.38092041015625;
+	setAttr ".tgi[0].ni[0].y" -240.4761962890625;
 	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" -132.49632263183594;
-	setAttr ".tgi[0].ni[1].y" -421.15914916992188;
+	setAttr ".tgi[0].ni[1].x" 364.18597412109375;
+	setAttr ".tgi[0].ni[1].y" -243.21951293945313;
 	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 98.492141723632813;
-	setAttr ".tgi[0].ni[2].y" -408.44528198242188;
+	setAttr ".tgi[0].ni[2].x" -360.4881591796875;
+	setAttr ".tgi[0].ni[2].y" -433.13421630859375;
 	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 602.38092041015625;
-	setAttr ".tgi[0].ni[3].y" -240.4761962890625;
+	setAttr ".tgi[0].ni[3].x" 98.492141723632813;
+	setAttr ".tgi[0].ni[3].y" -408.44528198242188;
 	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" -141.6832275390625;
-	setAttr ".tgi[0].ni[4].y" -253.5672607421875;
+	setAttr ".tgi[0].ni[4].x" -132.49632263183594;
+	setAttr ".tgi[0].ni[4].y" -421.15914916992188;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" -360.4881591796875;
-	setAttr ".tgi[0].ni[5].y" -433.13421630859375;
+	setAttr ".tgi[0].ni[5].x" 97.489158630371094;
+	setAttr ".tgi[0].ni[5].y" -239.57440185546875;
 	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" 364.18597412109375;
-	setAttr ".tgi[0].ni[6].y" -243.21951293945313;
+	setAttr ".tgi[0].ni[6].x" -141.6832275390625;
+	setAttr ".tgi[0].ni[6].y" -253.5672607421875;
 	setAttr ".tgi[0].ni[6].nvs" 1923;
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -1280,8 +1281,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".bswa";
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "help_layer.di" "dangoro_help_grp.do";
 connectAttr ":defaultColorMgtGlobals.cme" "dangoro_imagePlane_help_LShape.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "dangoro_imagePlane_help_LShape.cmcf";
@@ -1361,19 +1360,19 @@ connectAttr "place2dTexture2.vt3" "dangoro_color_file.vt3";
 connectAttr "place2dTexture2.vc1" "dangoro_color_file.vc1";
 connectAttr "place2dTexture2.o" "dangoro_color_file.uv";
 connectAttr "place2dTexture2.ofs" "dangoro_color_file.fs";
-connectAttr "dangoro_color_file.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "dangoro_normal_file.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "dangoro_mat.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "dangoro_normal_file.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "dangoro_color_file.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "dangoro_mat.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "dangoro_mat.msg" ":defaultShaderList1.s" -na;
