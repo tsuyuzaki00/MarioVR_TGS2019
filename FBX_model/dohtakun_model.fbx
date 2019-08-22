@@ -10,9 +10,9 @@ FBXHeaderExtension:  {
 		Month: 8
 		Day: 22
 		Hour: 16
-		Minute: 32
-		Second: 31
-		Millisecond: 207
+		Minute: 58
+		Second: 59
+		Millisecond: 369
 	}
 	Creator: "FBX SDK/FBX Plugins version 2019.2"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -34,13 +34,13 @@ FBXHeaderExtension:  {
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "Maya"
 			P: "Original|ApplicationVersion", "KString", "", "", "201806"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "22/08/2019 07:32:31.205"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "22/08/2019 07:58:59.367"
 			P: "Original|FileName", "KString", "", "", "P:\3DCG\Maya\Maya_Projects\TGS2019_model\FBX_model\dohtakun_model.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "Maya"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "201806"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "22/08/2019 07:32:31.205"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "22/08/2019 07:58:59.367"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "P:\3DCG\Maya\Maya_Projects\TGS2019_model\FBX_model"
 			P: "Original|ApplicationNativeFile", "KString", "", "", "P:\3DCG\Maya\Maya_Projects\TGS2019_model\Rig\dohtakun_rig.ma"
 		}
@@ -77,7 +77,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1809434944912, "", "Scene" {
+	Document: 1958706321632, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", "Take 001"
@@ -97,12 +97,12 @@ References:  {
 
 Definitions:  {
 	Version: 100
-	Count: 13
+	Count: 10
 	ObjectType: "GlobalSettings" {
 		Count: 1
 	}
 	ObjectType: "NodeAttribute" {
-		Count: 4
+		Count: 3
 		PropertyTemplate: "FbxNull" {
 			Properties70:  {
 				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
@@ -112,7 +112,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Model" {
-		Count: 5
+		Count: 4
 		PropertyTemplate: "FbxNode" {
 			Properties70:  {
 				P: "QuaternionInterpolate", "enum", "", "",0
@@ -226,48 +226,31 @@ Definitions:  {
 			}
 		}
 	}
-	ObjectType: "CollectionExclusive" {
-		Count: 1
-		PropertyTemplate: "FbxDisplayLayer" {
-			Properties70:  {
-				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
-				P: "Show", "bool", "", "",1
-				P: "Freeze", "bool", "", "",0
-				P: "LODBox", "bool", "", "",0
-			}
-		}
-	}
 }
 
 ; Object properties
 ;------------------------------------------------------------------
 
 Objects:  {
-	NodeAttribute: 1809409738640, "NodeAttribute::", "Null" {
+	NodeAttribute: 1960533627872, "NodeAttribute::", "Null" {
 		Properties70:  {
 			P: "Look", "enum", "", "",0
 		}
 		TypeFlags: "Null"
 	}
-	NodeAttribute: 1809409738992, "NodeAttribute::", "Null" {
+	NodeAttribute: 1960533632976, "NodeAttribute::", "Null" {
 		Properties70:  {
 			P: "Look", "enum", "", "",0
 		}
 		TypeFlags: "Null"
 	}
-	NodeAttribute: 1809409739520, "NodeAttribute::", "Null" {
+	NodeAttribute: 1960533638784, "NodeAttribute::", "Null" {
 		Properties70:  {
 			P: "Look", "enum", "", "",0
 		}
 		TypeFlags: "Null"
 	}
-	NodeAttribute: 1809409706784, "NodeAttribute::", "Null" {
-		Properties70:  {
-			P: "Look", "enum", "", "",0
-		}
-		TypeFlags: "Null"
-	}
-	Geometry: 1809414174864, "Geometry::", "Mesh" {
+	Geometry: 1960535502576, "Geometry::", "Mesh" {
 		Vertices: *300 {
 			a: -6.04909595721195e-15,-5.9146235476047e-15,-213.096771240234,71.2333297729492,300,-104.873252868652,149.423690795898,0,-213.096832275391,-7.82707147657441e-15,-5.91193718261248e-15,212.999984741211,4.15131228614159e-15,0,0,0,300,-104.873748779297,213,0,-149.566787719727,1.99840144432528e-15,114.331657409668,172.002471923828,0,300,5.7220458984375e-06,105.424766540527,300,-50.6510429382324,2.58787581275855e-15,118.058639526367,167.365203857422,-3.33911314532665e-15,205.058639526367,134.960433959961,0,161.558639526367,171.739196777344,4.60551453998628e-16,118.058639526367,171.739196777344,-1.17840345940673e-15,208.78564453125,138.132766723633,47.2269821166992,161.558639526367,135.505569458008,-9.84016555440276e-15,205.058639526367,139.334426879883,0,300,105.424758911133,43.5,161.558639526367,139.334426879883,43.5,161.558639526367,134.960433959961,126.238815307617,142.165817260742,88.4808731079102,124.388290405273,161.309478759766,69.3659057617188,114.837577819824,170.873733520508,88.4808731079102,105.273300170898,161.309478759766,88.4808731079102,112.030715942383,168.066864013672,101.512397766113,105.273300170898,161.309478759766,107.735794067383,118.080688476563,148.502090454102,107.228317260742,21.75,183.308639526367,139.334426879883,21.75,183.308639526367,134.960433959961,23.6134948730469,185.172149658203,136.819183349609,21.75,139.808639526367,155.536819458008,21.75,139.808639526367,151.162826538086,23.6134948730469,137.945159912109,153.754028320313,41.5419082641602,300,80.6646041870117,94.7231597900391,0,176.96728515625,159.212387084961,150,-100.108924865723,-71.2333297729492,300,-104.873252868652,-213,1.94091035357982e-15,-149.566787719727,-164.00163269043,8.04631155541108e-15,150.613754272461,-105.424766540527,300,-50.6510429382324,-47.2269821166992,161.558639526367,135.505569458008,-43.5,161.558639526367,139.334426879883,-43.5,161.558639526367,134.960433959961,-71.2333450317383,300,62.9676628112793,-126.238815307617,142.165817260742,88.4808731079102,-124.388290405273,161.309478759766,69.3659057617188,
 -114.837577819824,170.873733520508,88.4808731079102,-105.273300170898,161.309478759766,88.4808731079102,-112.030715942383,168.066864013672,101.512397766113,-105.273300170898,161.309478759766,107.735794067383,-118.080688476563,148.502090454102,107.228317260742,-21.75,183.308639526367,139.334426879883,-21.75,183.308639526367,134.960433959961,-23.6134948730469,185.172149658203,136.819183349609,-21.75,139.808639526367,155.536819458008,-21.75,139.808639526367,151.162826538086,-23.6134948730469,137.945159912109,153.754028320313,-35.6166763305664,300,84.1962051391602,-82.0008163452148,-1.04516064517736e-14,181.806869506836,-88.3290634155273,300,6.15831184387207,-188.500823974609,-1.29922631423381e-14,0.523475646972656,-159.212387084961,150,-100.108924865723,-137.811294555664,156.950210571289,4.04150104522705,84.2909164428711,257.773651123047,75.3042526245117,94.0876083374023,283.352447509766,5.91196632385254,102.005630493164,300,-39.2891731262207,56.8645095825195,300,50.2661399841309,79.4350738525391,300,5.48848438262939,147.514724731445,53.3164138793945,135.037170410156,198.917144775391,0,-63.2903213500977,207.885040283203,0,-118.230758666992,155.368499755859,151.248336791992,-81.4023818969727,103.715194702148,300,-44.9701080322266,121.498161315918,0,111.579940795898,160.207656860352,0,24.1448097229004,149.132827758789,153.2734375,-51.0557327270508,134.28125,158.096633911133,21.2208518981934,173.215927124023,26.6582069396973,35.8734245300293,110.328506469727,150,-158.985015869141,-3.02454797860598e-15,150,-158.985260009766,-110.328506469727,150,-158.985015869141,-116.523429870605,-6.63184869569228e-15,-213.096832275391,-130.44548034668,72.8154067993164,-186.829010009766,-206.642379760742,1.06338369082877e-15,-155.919784545898,-161.582901000977,-2.7842324494922e-15,-184.508316040039,-123.484451293945,36.4077033996582,-199.962905883789,-168.543930053711,36.4077033996582,-171.374420166016,125.327896118164,161.309432983398,72.5817184448242,109.428726196289,161.309432983398,88.4808731079102,125.327896118164,161.309432983398,104.380020141602,
@@ -340,7 +323,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 1809599908464, "Model::dohtakun_ctrl_grp", "Null" {
+	Model: 1960313988256, "Model::dohtakun_root_grp", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -351,7 +334,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 1809599910784, "Model::dohtakun_root_trs", "Null" {
+	Model: 1960313978976, "Model::dohtakun_body_grp", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -362,7 +345,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 1809599913104, "Model::dohtakun_root_ctrl", "Null" {
+	Model: 1960336700928, "Model::dohtakun", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -373,18 +356,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 1809599917744, "Model::dohtakun", "Null" {
-		Version: 232
-		Properties70:  {
-			P: "RotationActive", "bool", "", "",1
-			P: "InheritType", "enum", "", "",1
-			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "DefaultAttributeIndex", "int", "Integer", "",0
-		}
-		Shading: Y
-		Culling: "CullingOff"
-	}
-	Model: 1809599903824, "Model::doutakun_body", "Mesh" {
+	Model: 1960336689328, "Model::doutakun_body", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationPivot", "Vector3D", "Vector", "",0,0,-0.0484199523925781
@@ -398,7 +370,7 @@ Objects:  {
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 1809592759904, "Material::lambert1", "" {
+	Material: 1958599658592, "Material::lambert1", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -413,11 +385,6 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	CollectionExclusive: 1809599209664, "DisplayLayer::dohtakun_ctrl_layer", "DisplayLayer" {
-		Properties70:  {
-			P: "Color", "ColorRGB", "Color", "",1,0,0
-		}
-	}
 }
 
 ; Object connections
@@ -425,39 +392,30 @@ Objects:  {
 
 Connections:  {
 	
-	;Model::dohtakun_ctrl_grp, Model::RootNode
-	C: "OO",1809599908464,0
+	;Model::dohtakun_root_grp, Model::RootNode
+	C: "OO",1960313988256,0
 	
 	;Model::dohtakun, Model::RootNode
-	C: "OO",1809599917744,0
+	C: "OO",1960336700928,0
 	
-	;NodeAttribute::, Model::dohtakun_ctrl_grp
-	C: "OO",1809409738640,1809599908464
+	;NodeAttribute::, Model::dohtakun_root_grp
+	C: "OO",1960533627872,1960313988256
 	
-	;Model::dohtakun_root_trs, Model::dohtakun_ctrl_grp
-	C: "OO",1809599910784,1809599908464
+	;Model::dohtakun_body_grp, Model::dohtakun_root_grp
+	C: "OO",1960313978976,1960313988256
 	
-	;NodeAttribute::, Model::dohtakun_root_trs
-	C: "OO",1809409738992,1809599910784
-	
-	;Model::dohtakun_root_ctrl, Model::dohtakun_root_trs
-	C: "OO",1809599913104,1809599910784
-	
-	;NodeAttribute::, Model::dohtakun_root_ctrl
-	C: "OO",1809409739520,1809599913104
+	;NodeAttribute::, Model::dohtakun_body_grp
+	C: "OO",1960533632976,1960313978976
 	
 	;NodeAttribute::, Model::dohtakun
-	C: "OO",1809409706784,1809599917744
+	C: "OO",1960533638784,1960336700928
 	
 	;Model::doutakun_body, Model::dohtakun
-	C: "OO",1809599903824,1809599917744
+	C: "OO",1960336689328,1960336700928
 	
 	;Geometry::, Model::doutakun_body
-	C: "OO",1809414174864,1809599903824
+	C: "OO",1960535502576,1960336689328
 	
 	;Material::lambert1, Model::doutakun_body
-	C: "OO",1809592759904,1809599903824
-	
-	;Model::dohtakun_ctrl_grp, DisplayLayer::dohtakun_ctrl_layer
-	C: "OO",1809599908464,1809599209664
+	C: "OO",1958599658592,1960336689328
 }
