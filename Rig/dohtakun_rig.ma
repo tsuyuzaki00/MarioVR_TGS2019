@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: dohtakun_rig.ma
-//Last modified: Wed, Aug 21, 2019 05:46:58 PM
+//Last modified: Thu, Aug 22, 2019 04:56:30 PM
 //Codeset: 932
 file -rdi 1 -ns ":" -rfn "dohtakun_modelRN" -op "v=0;" -typ "mayaAscii" "P:/3DCG/Maya//Maya_Projects/TGS2019_model/Model/dohtakun/dohtakun_model.ma";
 file -r -ns ":" -dr 1 -rfn "dohtakun_modelRN" -op "v=0;" -typ "mayaAscii" "P:/3DCG/Maya//Maya_Projects/TGS2019_model/Model/dohtakun/dohtakun_model.ma";
@@ -16,14 +16,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "6B12CE2F-4604-C8AB-E88E-2AA3AA707E3E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 230.34275372873108 245.2581332603439 1260.582386372784 ;
-	setAttr ".r" -type "double3" -7.8904027796045995 7.2499360659096981 1.0019337072724658e-16 ;
-	setAttr ".rpt" -type "double3" -72.312945659029168 83.692884618447323 85.946835730817384 ;
+	setAttr ".t" -type "double3" 1229.7155470690775 457.22833999981026 986.38430903703636 ;
+	setAttr ".r" -type "double3" -8.538063869605395 10.289785407251864 -1.0101700043170858e-16 ;
+	setAttr ".rpt" -type "double3" -996.57291538129891 -86.342304780278084 520.02670593900166 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A3F27A64-4FDE-3E05-C17C-BBA63D0E6851";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 797.91722340970421;
+	setAttr ".coi" 1179.0453840292375;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82,6 +82,10 @@ createNode transform -n "dohtakun_root_trs" -p "dohtakun_ctrl_grp";
 	rename -uid "B98E7CDF-4DB3-701D-1983-F3992459703E";
 createNode transform -n "dohtakun_root_ctrl" -p "dohtakun_root_trs";
 	rename -uid "D331FBDE-42D2-5527-78C2-C2A2936DA50F";
+	setAttr -l on -k off ".v";
+	setAttr -l on -k off ".sx";
+	setAttr -l on -k off ".sy";
+	setAttr -l on -k off ".sz";
 createNode nurbsCurve -n "dohtakun_root_ctrlShape" -p "dohtakun_root_ctrl";
 	rename -uid "1AFD9737-4136-C1EF-6AAA-60AD4948A76F";
 	setAttr -k off ".v";
@@ -115,65 +119,33 @@ createNode nurbsCurve -n "dohtakun_root_ctrlShape1" -p "dohtakun_root_ctrl";
 		248.98230358802624 1.5308084989341895e-15 -143.74999999999983
 		2.7295559340152918e-13 3.061616997868383e-15 -287.5
 		;
-createNode fosterParent -n "dohtakun_modelRNfosterParent1";
-	rename -uid "8CAFA7FB-4964-CF5F-A4F6-E1984FDE790E";
-createNode pointConstraint -n "dohtakun_root_pointConstraint_ctrl" -p "dohtakun_modelRNfosterParent1";
-	rename -uid "50957E5F-4E98-4C10-6A06-F486809E01CD";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "dohtakun_root_ctrlW0" -dv 1 -min 
-		0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr -k on ".w0";
-createNode orientConstraint -n "dohtakun_root_orientConstraint_ctrl" -p "dohtakun_modelRNfosterParent1";
-	rename -uid "06D28130-427A-1F5A-2BA7-CDB2CB9CA392";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "dohtakun_root_ctrlW0" -dv 1 -min 
-		0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr -k on ".w0";
+createNode transform -n "dohtakun_root_grp";
+	rename -uid "3E89F989-4930-433B-2E0D-F5993C20AB57";
+createNode transform -n "dohtakun_body_grp" -p "dohtakun_root_grp";
+	rename -uid "1E411211-43E0-1E5E-12F2-0AB6EAFD61BC";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C746FB74-44AC-2417-9741-628059F39705";
+	rename -uid "61782E7C-478A-CCDE-074A-B0A012524771";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "5D6D8DC0-434D-3464-D0B5-A0B92ADDE9BD";
+	rename -uid "A40ADBAA-402A-99DA-0DBD-76ADDAA3AAA9";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F0CA2926-49E6-997F-D0D6-24AC20C40470";
+	rename -uid "F9D33853-4057-0620-099A-9AB022152436";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F6CD58B7-42EF-2857-2982-E282619F1EC7";
+	rename -uid "070AF51A-4397-8CF8-7C2C-AEAA38ADE916";
 	setAttr ".cdl" 1;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "92D68934-4B90-39B0-BB6E-FDA3343F3E8F";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "DBCF2761-4D9B-293C-B54A-5D9439907572";
+	rename -uid "AEEA1B27-4F2A-6431-0F39-B692493FF0B4";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "182450E4-441E-FBAA-FB81-A2AF3851B4A2";
 	setAttr ".g" yes;
 createNode reference -n "dohtakun_modelRN";
 	rename -uid "7C74121B-473E-A0CE-4BD7-5C97DA9B01D7";
-	setAttr -s 17 ".phl";
+	setAttr -s 10 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[5]" 0;
 	setAttr ".phl[6]" 0;
@@ -181,13 +153,6 @@ createNode reference -n "dohtakun_modelRN";
 	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
 	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"dohtakun_modelRN"
 		"dohtakun_modelRN" 10
@@ -209,40 +174,24 @@ createNode reference -n "dohtakun_modelRN";
 		""
 		5 3 "dohtakun_modelRN" "|dohtakun_root_jnt|dohtakun_root_jnt_T.message" 
 		"dohtakun_modelRN.placeHolderList[6]" ""
-		"dohtakun_modelRN" 18
-		0 "|dohtakun_modelRNfosterParent1|dohtakun_root_orientConstraint_ctrl" "|dohtakun" 
-		"-s -r "
-		0 "|dohtakun_modelRNfosterParent1|dohtakun_root_pointConstraint_ctrl" "|dohtakun" 
-		"-s -r "
+		"dohtakun_modelRN" 11
 		2 "|dohtakun_help_grp|dohtakun_image_L|dohtakun_image_LShape" "coverage" 
 		" -type \"short2\" 1022 213"
 		2 "|dohtakun_help_grp|dohtakun_image_F|dohtakun_image_FShape" "coverage" 
 		" -type \"short2\" 1022 213"
+		2 "|dohtakun" "translate" " -type \"double3\" 0 0 0"
+		2 "|dohtakun" "rotate" " -type \"double3\" 0 0 0"
 		2 "dohtakun_help_layer" "displayOrder" " 2"
 		2 "dohtakun_geo_layer" "displayOrder" " 1"
 		2 "dohtakun_skin_jnt_layer" "visibility" " 0"
-		5 4 "dohtakun_modelRN" "|dohtakun.translateX" "dohtakun_modelRN.placeHolderList[7]" 
+		5 4 "dohtakun_modelRN" "|dohtakun|doutakun_body.translate" "dohtakun_modelRN.placeHolderList[7]" 
 		""
-		5 4 "dohtakun_modelRN" "|dohtakun.translateY" "dohtakun_modelRN.placeHolderList[8]" 
+		5 4 "dohtakun_modelRN" "|dohtakun|doutakun_body.rotate" "dohtakun_modelRN.placeHolderList[8]" 
 		""
-		5 4 "dohtakun_modelRN" "|dohtakun.translateZ" "dohtakun_modelRN.placeHolderList[9]" 
+		5 3 "dohtakun_modelRN" "|dohtakun|doutakun_body.message" "dohtakun_modelRN.placeHolderList[9]" 
 		""
-		5 3 "dohtakun_modelRN" "|dohtakun.parentInverseMatrix" "dohtakun_modelRN.placeHolderList[10]" 
-		""
-		5 3 "dohtakun_modelRN" "|dohtakun.parentInverseMatrix" "dohtakun_modelRN.placeHolderList[11]" 
-		""
-		5 3 "dohtakun_modelRN" "|dohtakun.rotatePivot" "dohtakun_modelRN.placeHolderList[12]" 
-		""
-		5 3 "dohtakun_modelRN" "|dohtakun.rotatePivotTranslate" "dohtakun_modelRN.placeHolderList[13]" 
-		""
-		5 4 "dohtakun_modelRN" "|dohtakun.rotateX" "dohtakun_modelRN.placeHolderList[14]" 
-		""
-		5 4 "dohtakun_modelRN" "|dohtakun.rotateY" "dohtakun_modelRN.placeHolderList[15]" 
-		""
-		5 4 "dohtakun_modelRN" "|dohtakun.rotateZ" "dohtakun_modelRN.placeHolderList[16]" 
-		""
-		5 3 "dohtakun_modelRN" "|dohtakun.rotateOrder" "dohtakun_modelRN.placeHolderList[17]" 
-		"";
+		5 3 "dohtakun_modelRN" "|dohtakun|doutakun_body|doutakun_bodyShape.message" 
+		"dohtakun_modelRN.placeHolderList[10]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode1";
@@ -255,7 +204,7 @@ createNode script -n "uiConfigurationScriptNode1";
 		+ "                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1750\n            -height 750\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n"
 		+ "            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n"
 		+ "            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
@@ -302,26 +251,32 @@ createNode displayLayer -n "dohtakun_ctrl_layer";
 	setAttr ".c" 13;
 	setAttr ".do" 3;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo1";
-	rename -uid "8DA97013-4418-27B9-65BA-9599F99DC991";
+	rename -uid "3F068463-424B-FC05-2C7C-AC8D34A273CB";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -834.37140532679939 -609.52378530351041 ;
-	setAttr ".tgi[0].vh" -type "double2" -35.866655331142283 205.95237276856901 ;
-	setAttr -s 5 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -217.14285278320313;
-	setAttr ".tgi[0].ni[0].y" -130;
-	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" -217.14285278320313;
-	setAttr ".tgi[0].ni[1].y" -231.42857360839844;
-	setAttr ".tgi[0].ni[1].nvs" 18304;
-	setAttr ".tgi[0].ni[2].x" -897.14288330078125;
-	setAttr ".tgi[0].ni[2].y" 61.428569793701172;
-	setAttr ".tgi[0].ni[2].nvs" 18306;
-	setAttr ".tgi[0].ni[3].x" -518.91754150390625;
-	setAttr ".tgi[0].ni[3].y" 276.8572998046875;
-	setAttr ".tgi[0].ni[3].nvs" 18304;
-	setAttr ".tgi[0].ni[4].x" -178.30680847167969;
-	setAttr ".tgi[0].ni[4].y" 355.93524169921875;
-	setAttr ".tgi[0].ni[4].nvs" 18304;
+	setAttr ".tgi[0].vl" -type "double2" -645.46135289542735 -606.44432904683867 ;
+	setAttr ".tgi[0].vh" -type "double2" 327.80609301362534 387.50892867749684 ;
+	setAttr -s 7 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -444.23989868164063;
+	setAttr ".tgi[0].ni[0].y" -401.28680419921875;
+	setAttr ".tgi[0].ni[0].nvs" 18306;
+	setAttr ".tgi[0].ni[1].x" -130.62956237792969;
+	setAttr ".tgi[0].ni[1].y" 94.372962951660156;
+	setAttr ".tgi[0].ni[1].nvs" 18306;
+	setAttr ".tgi[0].ni[2].x" -1132.857177734375;
+	setAttr ".tgi[0].ni[2].y" -101.42857360839844;
+	setAttr ".tgi[0].ni[2].nvs" 18304;
+	setAttr ".tgi[0].ni[3].x" -414.68243408203125;
+	setAttr ".tgi[0].ni[3].y" 103.21798706054688;
+	setAttr ".tgi[0].ni[3].nvs" 18306;
+	setAttr ".tgi[0].ni[4].x" -716.14202880859375;
+	setAttr ".tgi[0].ni[4].y" 139.0003662109375;
+	setAttr ".tgi[0].ni[4].nvs" 18306;
+	setAttr ".tgi[0].ni[5].x" -518.91754150390625;
+	setAttr ".tgi[0].ni[5].y" 276.8572998046875;
+	setAttr ".tgi[0].ni[5].nvs" 18304;
+	setAttr ".tgi[0].ni[6].x" -178.30680847167969;
+	setAttr ".tgi[0].ni[6].y" 355.93524169921875;
+	setAttr ".tgi[0].ni[6].nvs" 18304;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
@@ -446,42 +401,15 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".bswa";
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
-connectAttr "dohtakun_root_pointConstraint_ctrl.ctx" "dohtakun_modelRN.phl[7]";
-connectAttr "dohtakun_root_pointConstraint_ctrl.cty" "dohtakun_modelRN.phl[8]";
-connectAttr "dohtakun_root_pointConstraint_ctrl.ctz" "dohtakun_modelRN.phl[9]";
-connectAttr "dohtakun_modelRN.phl[10]" "dohtakun_root_orientConstraint_ctrl.cpim"
+connectAttr "dohtakun_body_grp.t" "dohtakun_modelRN.phl[7]";
+connectAttr "dohtakun_body_grp.r" "dohtakun_modelRN.phl[8]";
+connectAttr "dohtakun_modelRN.phl[9]" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[1].dn"
 		;
-connectAttr "dohtakun_modelRN.phl[11]" "dohtakun_root_pointConstraint_ctrl.cpim"
-		;
-connectAttr "dohtakun_modelRN.phl[12]" "dohtakun_root_pointConstraint_ctrl.crp";
-connectAttr "dohtakun_modelRN.phl[13]" "dohtakun_root_pointConstraint_ctrl.crt";
-connectAttr "dohtakun_root_orientConstraint_ctrl.crx" "dohtakun_modelRN.phl[14]"
-		;
-connectAttr "dohtakun_root_orientConstraint_ctrl.cry" "dohtakun_modelRN.phl[15]"
-		;
-connectAttr "dohtakun_root_orientConstraint_ctrl.crz" "dohtakun_modelRN.phl[16]"
-		;
-connectAttr "dohtakun_modelRN.phl[17]" "dohtakun_root_orientConstraint_ctrl.cro"
+connectAttr "dohtakun_modelRN.phl[10]" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[2].dn"
 		;
 connectAttr "dohtakun_ctrl_layer.di" "dohtakun_ctrl_grp.do";
-connectAttr "dohtakun_root_ctrl.t" "dohtakun_root_pointConstraint_ctrl.tg[0].tt"
-		;
-connectAttr "dohtakun_root_ctrl.rp" "dohtakun_root_pointConstraint_ctrl.tg[0].trp"
-		;
-connectAttr "dohtakun_root_ctrl.rpt" "dohtakun_root_pointConstraint_ctrl.tg[0].trt"
-		;
-connectAttr "dohtakun_root_ctrl.pm" "dohtakun_root_pointConstraint_ctrl.tg[0].tpm"
-		;
-connectAttr "dohtakun_root_pointConstraint_ctrl.w0" "dohtakun_root_pointConstraint_ctrl.tg[0].tw"
-		;
-connectAttr "dohtakun_root_ctrl.r" "dohtakun_root_orientConstraint_ctrl.tg[0].tr"
-		;
-connectAttr "dohtakun_root_ctrl.ro" "dohtakun_root_orientConstraint_ctrl.tg[0].tro"
-		;
-connectAttr "dohtakun_root_ctrl.pm" "dohtakun_root_orientConstraint_ctrl.tg[0].tpm"
-		;
-connectAttr "dohtakun_root_orientConstraint_ctrl.w0" "dohtakun_root_orientConstraint_ctrl.tg[0].tw"
-		;
+connectAttr "dohtakun_root_ctrl.t" "dohtakun_body_grp.t";
+connectAttr "dohtakun_root_ctrl.r" "dohtakun_body_grp.r";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -491,17 +419,16 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "dohtakun_root_ctrl.t" "dohtakun_modelRN.phl[2]";
 connectAttr "dohtakun_root_ctrl.r" "dohtakun_modelRN.phl[3]";
 connectAttr "dohtakun_root_ctrl.s" "dohtakun_modelRN.phl[4]";
-connectAttr "dohtakun_modelRNfosterParent1.msg" "dohtakun_modelRN.fp";
 connectAttr "layerManager.dli[2]" "dohtakun_ctrl_layer.id";
-connectAttr "dohtakun_root_pointConstraint_ctrl.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[0].dn"
+connectAttr "dohtakun_root_grp.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[0].dn"
 		;
-connectAttr "dohtakun_root_orientConstraint_ctrl.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[1].dn"
+connectAttr "dohtakun_body_grp.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[3].dn"
 		;
-connectAttr "dohtakun_root_ctrl.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[2].dn"
+connectAttr "dohtakun_root_ctrl.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[4].dn"
 		;
-connectAttr "dohtakun_root_trs.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[3].dn"
+connectAttr "dohtakun_root_trs.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[5].dn"
 		;
-connectAttr "dohtakun_root_ctrlShape1.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[4].dn"
+connectAttr "dohtakun_root_ctrlShape1.msg" "MayaNodeEditorSavedTabsInfo1.tgi[0].ni[6].dn"
 		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of dohtakun_rig.ma
