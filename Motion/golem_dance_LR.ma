@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
-//Name: golem_dance_L.ma
-//Last modified: Fri, Aug 23, 2019 04:05:10 PM
+//Name: golem_dance_LR.ma
+//Last modified: Fri, Aug 23, 2019 02:43:38 PM
 //Codeset: 932
 file -rdi 1 -ns ":" -rfn "golem_rigRN" -op "v=0;" -typ "mayaAscii" "P:/3DCG/Maya//Maya_Projects/TGS2019_model/Rig/golem_rig.ma";
 file -rdi 2 -ns ":" -rfn "golem_modelRN" -op "v=0;" -typ "mayaAscii" "P:/3DCG/Maya//Maya_Projects/TGS2019_model/Model/golem/golem_model.ma";
@@ -17,18 +17,18 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "FA9C5031-40CB-932B-3E52-C888601B6BEE";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -574.12974993573653 351.18776308445155 1195.026860382415 ;
-	setAttr ".r" -type "double3" -25.906548411607943 13.277109367210608 0 ;
-	setAttr ".rpt" -type "double3" 842.7853275928851 382.43958163232236 -162.51177298753043 ;
+	setAttr ".t" -type "double3" -197.02726074781984 874.74934607261969 713.50097543167476 ;
+	setAttr ".r" -type "double3" -36.307715843607809 3.1903245222045267 1.990932269603872e-16 ;
+	setAttr ".rpt" -type "double3" 286.77746172467897 -80.517764710583037 70.420046671236378 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "245958B2-4447-616B-7D36-D4B7B24CFB3E";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 8370.3586274270201;
+	setAttr ".coi" 4734.3343500467727;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -263.1048723535398 299.36352239177756 -621.90419571976634 ;
+	setAttr ".tp" -type "double3" 0 -7.8886090522101181e-30 1.4210854715202004e-13 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "99AA6DC9-4856-7D60-222D-06A079EBB791";
@@ -78,19 +78,19 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "70E1185B-48E6-E43C-7716-958D237CEC5A";
+	rename -uid "4D48B91D-4288-427D-706E-D4B8B164049D";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "750FFFF1-438B-25F6-D7B0-7EAB957BCBAA";
+	rename -uid "D0E5EBCB-4353-8671-8AA8-529D5B8732D4";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0615FF44-426F-B6C0-D5A2-C89DF147A677";
+	rename -uid "63F291A6-420B-4FE9-821F-E782E8070FD6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "FDD64943-49B3-1382-8765-8098616AF738";
+	rename -uid "6B8410F5-412D-5D5B-3D3C-AABE6AD198E3";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "36FCFD0E-4DAE-B1C3-C23A-DAA0BCD43200";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "EE663A0B-401B-0F65-4FF9-F3819B379FC7";
+	rename -uid "692EAD04-4808-CAE7-4BB3-7DB7CC140D76";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "16476BA0-4203-E7A3-2FA9-4F8D0138AF68";
 	setAttr ".g" yes;
@@ -151,7 +151,7 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode reference -n "golem_rigRN";
 	rename -uid "33908C99-491F-0DFC-BAE6-66B47ED04614";
-	setAttr -s 255 ".phl";
+	setAttr -s 261 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -407,6 +407,12 @@ createNode reference -n "golem_rigRN";
 	setAttr ".phl[253]" 0;
 	setAttr ".phl[254]" 0;
 	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"golem_rigRN"
 		"golem_modelRN" 0
@@ -480,7 +486,7 @@ createNode reference -n "golem_rigRN";
 		""
 		5 3 "golem_rigRN" "blinn1SG.message" "golem_rigRN.placeHolderList[28]" 
 		""
-		"golem_rigRN" 272
+		"golem_rigRN" 278
 		2 "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl" "translate" " -type \"double3\" 0 0 0"
 		
 		2 "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl" "rotate" " -type \"double3\" 0 0 0"
@@ -650,379 +656,391 @@ createNode reference -n "golem_rigRN";
 		"golem_rigRN.placeHolderList[67]" ""
 		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R.message" 
 		"golem_rigRN.placeHolderList[68]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R.message" 
+		5 4 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R.translateX" 
 		"golem_rigRN.placeHolderList[69]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_arm_ctrlFK_RShape.message" 
+		5 4 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R.translateY" 
 		"golem_rigRN.placeHolderList[70]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R.message" 
+		5 4 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R.translateZ" 
 		"golem_rigRN.placeHolderList[71]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R.message" 
+		5 4 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R.rotateX" 
 		"golem_rigRN.placeHolderList[72]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R.message" 
+		5 4 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R.rotateY" 
 		"golem_rigRN.placeHolderList[73]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_lowArmB_ctrl_RShape.message" 
+		5 4 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R.rotateZ" 
 		"golem_rigRN.placeHolderList[74]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_lowArmB_ctrl_RShape1.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R.message" 
 		"golem_rigRN.placeHolderList[75]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_arm_ctrlFK_RShape.message" 
 		"golem_rigRN.placeHolderList[76]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R|golem_handB_driv_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R.message" 
 		"golem_rigRN.placeHolderList[77]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R|golem_handB_driv_R|golem_handB_ctrl_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R.message" 
 		"golem_rigRN.placeHolderList[78]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R|golem_handB_driv_R|golem_handB_ctrl_R|golem_handB_ctrl_RShape.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R.message" 
 		"golem_rigRN.placeHolderList[79]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R|golem_handB_driv_R|golem_handB_ctrl_R|golem_handB_ctrl_RShape2.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_lowArmB_ctrl_RShape.message" 
 		"golem_rigRN.placeHolderList[80]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_lowArmB_ctrl_RShape1.message" 
 		"golem_rigRN.placeHolderList[81]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R|golem_legB_driv_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R.message" 
 		"golem_rigRN.placeHolderList[82]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R|golem_legB_driv_R|golem_legB_ctrl_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R|golem_handB_driv_R.message" 
 		"golem_rigRN.placeHolderList[83]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R|golem_legB_driv_R|golem_legB_ctrl_R|golem_legB_ctrl_RShape.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R|golem_handB_driv_R|golem_handB_ctrl_R.message" 
 		"golem_rigRN.placeHolderList[84]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R|golem_legB_driv_R|golem_legB_ctrl_R|golem_legB_ctrl_RShape1.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R|golem_handB_driv_R|golem_handB_ctrl_R|golem_handB_ctrl_RShape.message" 
 		"golem_rigRN.placeHolderList[85]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_COG_trs_C|golem_COG_ctrl_C|golem_spine_trs_C|golem_spine_ctrl_C|golem_arm_trsFK_R|golem_arm_ctrlFK_R|golem_lowArmB_trs_R|golem_lowArmB_driv_R|golem_lowArmB_ctrl_R|golem_handB_trs_R|golem_handB_driv_R|golem_handB_ctrl_R|golem_handB_ctrl_RShape2.message" 
 		"golem_rigRN.placeHolderList[86]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L|golem_legB_driv_L.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R.message" 
 		"golem_rigRN.placeHolderList[87]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L|golem_legB_driv_L|golem_legB_ctrl_L.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R|golem_legB_driv_R.message" 
 		"golem_rigRN.placeHolderList[88]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L|golem_legB_driv_L|golem_legB_ctrl_L|golem_legB_ctrl_LShape.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R|golem_legB_driv_R|golem_legB_ctrl_R.message" 
 		"golem_rigRN.placeHolderList[89]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L|golem_legB_driv_L|golem_legB_ctrl_L|golem_legB_ctrl_LShape2.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R|golem_legB_driv_R|golem_legB_ctrl_R|golem_legB_ctrl_RShape.message" 
 		"golem_rigRN.placeHolderList[90]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_R|golem_legB_driv_R|golem_legB_ctrl_R|golem_legB_ctrl_RShape1.message" 
 		"golem_rigRN.placeHolderList[91]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L|golem_footB_driv_L.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L.message" 
 		"golem_rigRN.placeHolderList[92]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L|golem_footB_driv_L|golem_footB_ctrl_L.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L|golem_legB_driv_L.message" 
 		"golem_rigRN.placeHolderList[93]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L|golem_footB_driv_L|golem_footB_ctrl_L|golem_footB_ctrl_LShape.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L|golem_legB_driv_L|golem_legB_ctrl_L.message" 
 		"golem_rigRN.placeHolderList[94]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L|golem_footB_driv_L|golem_footB_ctrl_L|golem_footB_ctrl_LShape1.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L|golem_legB_driv_L|golem_legB_ctrl_L|golem_legB_ctrl_LShape.message" 
 		"golem_rigRN.placeHolderList[95]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_legB_trs_L|golem_legB_driv_L|golem_legB_ctrl_L|golem_legB_ctrl_LShape2.message" 
 		"golem_rigRN.placeHolderList[96]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R|golem_footB_driv_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L.message" 
 		"golem_rigRN.placeHolderList[97]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R|golem_footB_driv_R|golem_footB_ctrl_R.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L|golem_footB_driv_L.message" 
 		"golem_rigRN.placeHolderList[98]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R|golem_footB_driv_R|golem_footB_ctrl_R|golem_footB_ctrl_RShape.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L|golem_footB_driv_L|golem_footB_ctrl_L.message" 
 		"golem_rigRN.placeHolderList[99]" ""
-		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R|golem_footB_driv_R|golem_footB_ctrl_R|golem_footB_ctrl_RShape1.message" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L|golem_footB_driv_L|golem_footB_ctrl_L|golem_footB_ctrl_LShape.message" 
 		"golem_rigRN.placeHolderList[100]" ""
-		5 3 "golem_rigRN" "|golem_modelRNfosterParent1.message" "golem_rigRN.placeHolderList[101]" 
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_L|golem_footB_driv_L|golem_footB_ctrl_L|golem_footB_ctrl_LShape1.message" 
+		"golem_rigRN.placeHolderList[101]" ""
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R.message" 
+		"golem_rigRN.placeHolderList[102]" ""
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R|golem_footB_driv_R.message" 
+		"golem_rigRN.placeHolderList[103]" ""
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R|golem_footB_driv_R|golem_footB_ctrl_R.message" 
+		"golem_rigRN.placeHolderList[104]" ""
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R|golem_footB_driv_R|golem_footB_ctrl_R|golem_footB_ctrl_RShape.message" 
+		"golem_rigRN.placeHolderList[105]" ""
+		5 3 "golem_rigRN" "|golem_ctrl_grp|golem_root_trs|golem_root_ctrl|golem_footB_trs_R|golem_footB_driv_R|golem_footB_ctrl_R|golem_footB_ctrl_RShape1.message" 
+		"golem_rigRN.placeHolderList[106]" ""
+		5 3 "golem_rigRN" "|golem_modelRNfosterParent1.message" "golem_rigRN.placeHolderList[107]" 
 		""
 		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_hand_geoShapeDeformed.message" 
-		"golem_rigRN.placeHolderList[102]" ""
-		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_arm_geoShapeDeformed.message" 
-		"golem_rigRN.placeHolderList[103]" ""
-		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_body_geoShapeDeformed.message" 
-		"golem_rigRN.placeHolderList[104]" ""
-		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_head_geoShapeDeformed.message" 
-		"golem_rigRN.placeHolderList[105]" ""
-		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_leg_geoShapeDeformed.message" 
-		"golem_rigRN.placeHolderList[106]" ""
-		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_foot_geoShapeDeformed.message" 
-		"golem_rigRN.placeHolderList[107]" ""
-		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|gim_bodyShapeDeformed.message" 
 		"golem_rigRN.placeHolderList[108]" ""
-		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_armShapeDeformed.message" 
+		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_arm_geoShapeDeformed.message" 
 		"golem_rigRN.placeHolderList[109]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt.message" "golem_rigRN.placeHolderList[110]" 
+		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_body_geoShapeDeformed.message" 
+		"golem_rigRN.placeHolderList[110]" ""
+		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_head_geoShapeDeformed.message" 
+		"golem_rigRN.placeHolderList[111]" ""
+		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_leg_geoShapeDeformed.message" 
+		"golem_rigRN.placeHolderList[112]" ""
+		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_foot_geoShapeDeformed.message" 
+		"golem_rigRN.placeHolderList[113]" ""
+		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|gim_bodyShapeDeformed.message" 
+		"golem_rigRN.placeHolderList[114]" ""
+		5 3 "golem_rigRN" "|golem_modelRNfosterParent1|golem_armShapeDeformed.message" 
+		"golem_rigRN.placeHolderList[115]" ""
+		5 3 "golem_rigRN" "|golem_root_jnt.message" "golem_rigRN.placeHolderList[116]" 
 		""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C.message" "golem_rigRN.placeHolderList[111]" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C.message" "golem_rigRN.placeHolderList[117]" 
 		""
 		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C.message" 
-		"golem_rigRN.placeHolderList[112]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L.message" 
-		"golem_rigRN.placeHolderList[113]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L|golem_lowArmA_jnt_L.message" 
-		"golem_rigRN.placeHolderList[114]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L|golem_lowArmA_jnt_L|golem_lowArmB_jnt_L.message" 
-		"golem_rigRN.placeHolderList[115]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L|golem_lowArmA_jnt_L|golem_lowArmB_jnt_L|golem_handA_jnt_L.message" 
-		"golem_rigRN.placeHolderList[116]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L|golem_lowArmA_jnt_L|golem_lowArmB_jnt_L|golem_handA_jnt_L|golem_handB_jnt_L.message" 
-		"golem_rigRN.placeHolderList[117]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R.message" 
 		"golem_rigRN.placeHolderList[118]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R|golem_lowArmA_jnt_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L.message" 
 		"golem_rigRN.placeHolderList[119]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R|golem_lowArmA_jnt_R|golem_lowArmB_jnt_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L|golem_lowArmA_jnt_L.message" 
 		"golem_rigRN.placeHolderList[120]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R|golem_lowArmA_jnt_R|golem_lowArmB_jnt_R|golem_handA_jnt_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L|golem_lowArmA_jnt_L|golem_lowArmB_jnt_L.message" 
 		"golem_rigRN.placeHolderList[121]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R|golem_lowArmA_jnt_R|golem_lowArmB_jnt_R|golem_handA_jnt_R|golem_handB_jnt_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L|golem_lowArmA_jnt_L|golem_lowArmB_jnt_L|golem_handA_jnt_L.message" 
 		"golem_rigRN.placeHolderList[122]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_L|golem_lowArmA_jnt_L|golem_lowArmB_jnt_L|golem_handA_jnt_L|golem_handB_jnt_L.message" 
 		"golem_rigRN.placeHolderList[123]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_L|golem_legB_jnt_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R.message" 
 		"golem_rigRN.placeHolderList[124]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_L|golem_legB_jnt_L|golem_footA_jnt_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R|golem_lowArmA_jnt_R.message" 
 		"golem_rigRN.placeHolderList[125]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_L|golem_legB_jnt_L|golem_footA_jnt_L|golem_footB_jnt_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R|golem_lowArmA_jnt_R|golem_lowArmB_jnt_R.message" 
 		"golem_rigRN.placeHolderList[126]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_neck_jnt_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R|golem_lowArmA_jnt_R|golem_lowArmB_jnt_R|golem_handA_jnt_R.message" 
 		"golem_rigRN.placeHolderList[127]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_neck_jnt_C|golem_head_jnt_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_spine_jnt_C|golem_upArm_jnt_R|golem_lowArmA_jnt_R|golem_lowArmB_jnt_R|golem_handA_jnt_R|golem_handB_jnt_R.message" 
 		"golem_rigRN.placeHolderList[128]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_L.message" 
 		"golem_rigRN.placeHolderList[129]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_R|golem_legB_jnt_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_L|golem_legB_jnt_L.message" 
 		"golem_rigRN.placeHolderList[130]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_R|golem_legB_jnt_R|golem_footA_jnt_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_L|golem_legB_jnt_L|golem_footA_jnt_L.message" 
 		"golem_rigRN.placeHolderList[131]" ""
-		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_R|golem_legB_jnt_R|golem_footA_jnt_R|golem_footB_jnt_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_L|golem_legB_jnt_L|golem_footA_jnt_L|golem_footB_jnt_L.message" 
 		"golem_rigRN.placeHolderList[132]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx.message" "golem_rigRN.placeHolderList[133]" 
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_neck_jnt_C.message" 
+		"golem_rigRN.placeHolderList[133]" ""
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_neck_jnt_C|golem_head_jnt_C.message" 
+		"golem_rigRN.placeHolderList[134]" ""
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_R.message" 
+		"golem_rigRN.placeHolderList[135]" ""
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_R|golem_legB_jnt_R.message" 
+		"golem_rigRN.placeHolderList[136]" ""
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_R|golem_legB_jnt_R|golem_footA_jnt_R.message" 
+		"golem_rigRN.placeHolderList[137]" ""
+		5 3 "golem_rigRN" "|golem_root_jnt|golem_COG_jnt_C|golem_legA_jnt_R|golem_legB_jnt_R|golem_footA_jnt_R|golem_footB_jnt_R.message" 
+		"golem_rigRN.placeHolderList[138]" ""
+		5 3 "golem_rigRN" "|golem_root_jntPrx.message" "golem_rigRN.placeHolderList[139]" 
 		""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C.message" "golem_rigRN.placeHolderList[134]" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C.message" "golem_rigRN.placeHolderList[140]" 
 		""
 		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C.message" 
-		"golem_rigRN.placeHolderList[135]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L.message" 
-		"golem_rigRN.placeHolderList[136]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L.message" 
-		"golem_rigRN.placeHolderList[137]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L.message" 
-		"golem_rigRN.placeHolderList[138]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L.message" 
-		"golem_rigRN.placeHolderList[139]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L|golem_handB_jntPrx_L.message" 
-		"golem_rigRN.placeHolderList[140]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L|golem_handB_jntPrx_L|golem_hand_jntPrx_LT.message" 
 		"golem_rigRN.placeHolderList[141]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L|golem_handB_jntPrx_L|golem_handB_pointConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[142]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L|golem_handB_jntPrx_L|golem_handB_orientConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[143]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_lowArmB_pointConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[144]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_lowArmB_orientConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[145]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_arm_pointConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L|golem_handB_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[146]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_arm_orientConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L|golem_handB_jntPrx_L|golem_hand_jntPrx_LT.message" 
 		"golem_rigRN.placeHolderList[147]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L|golem_handB_jntPrx_L|golem_handB_pointConstraint_L.message" 
 		"golem_rigRN.placeHolderList[148]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_handA_jntPrx_L|golem_handB_jntPrx_L|golem_handB_orientConstraint_L.message" 
 		"golem_rigRN.placeHolderList[149]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_lowArmB_pointConstraint_L.message" 
 		"golem_rigRN.placeHolderList[150]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_lowArmA_jntPrx_L|golem_lowArmB_jntPrx_L|golem_lowArmB_orientConstraint_L.message" 
 		"golem_rigRN.placeHolderList[151]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R|golem_handB_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_arm_pointConstraint_L.message" 
 		"golem_rigRN.placeHolderList[152]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R|golem_handB_jntPrx_R|golem_hand_jntPrx_RT.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_L|golem_arm_orientConstraint_L.message" 
 		"golem_rigRN.placeHolderList[153]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R|golem_handB_jntPrx_R|golem_handB_pointConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[154]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R|golem_handB_jntPrx_R|golem_handB_orientConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[155]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_lowArmB_pointConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[156]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_lowArmB_orientConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[157]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_arm_pointConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R|golem_handB_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[158]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_arm_orientConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R|golem_handB_jntPrx_R|golem_hand_jntPrx_RT.message" 
 		"golem_rigRN.placeHolderList[159]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_spine_orientConstraint_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R|golem_handB_jntPrx_R|golem_handB_pointConstraint_R.message" 
 		"golem_rigRN.placeHolderList[160]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_handA_jntPrx_R|golem_handB_jntPrx_R|golem_handB_orientConstraint_R.message" 
 		"golem_rigRN.placeHolderList[161]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C|golem_head_jntPrx_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_lowArmB_pointConstraint_R.message" 
 		"golem_rigRN.placeHolderList[162]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C|golem_head_jntPrx_C|golem_head_jntPrx_CT.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_lowArmA_jntPrx_R|golem_lowArmB_jntPrx_R|golem_lowArmB_orientConstraint_R.message" 
 		"golem_rigRN.placeHolderList[163]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C|golem_head_jntPrx_C|golem_head_pointConstraint_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_arm_pointConstraint_R.message" 
 		"golem_rigRN.placeHolderList[164]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C|golem_head_jntPrx_C|golem_head_orientConstraint_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_upArm_jntPrx_R|golem_arm_orientConstraint_R.message" 
 		"golem_rigRN.placeHolderList[165]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_spine_jntPrx_C|golem_spine_orientConstraint_C.message" 
 		"golem_rigRN.placeHolderList[166]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C.message" 
 		"golem_rigRN.placeHolderList[167]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C|golem_head_jntPrx_C.message" 
 		"golem_rigRN.placeHolderList[168]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L|golem_footB_jntPrx_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C|golem_head_jntPrx_C|golem_head_jntPrx_CT.message" 
 		"golem_rigRN.placeHolderList[169]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L|golem_footB_jntPrx_L|golem_foot_jntPrx_LT.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C|golem_head_jntPrx_C|golem_head_pointConstraint_C.message" 
 		"golem_rigRN.placeHolderList[170]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L|golem_footB_jntPrx_L|golem_footB_pointConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_neck_jntPrx_C|golem_head_jntPrx_C|golem_head_orientConstraint_C.message" 
 		"golem_rigRN.placeHolderList[171]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L|golem_footB_jntPrx_L|golem_footB_orientConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[172]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_legB_pointConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[173]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_legB_orientConstraint_L.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[174]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L|golem_footB_jntPrx_L.message" 
 		"golem_rigRN.placeHolderList[175]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L|golem_footB_jntPrx_L|golem_foot_jntPrx_LT.message" 
 		"golem_rigRN.placeHolderList[176]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L|golem_footB_jntPrx_L|golem_footB_pointConstraint_L.message" 
 		"golem_rigRN.placeHolderList[177]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R|golem_footB_jntPrx_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_footA_jntPrx_L|golem_footB_jntPrx_L|golem_footB_orientConstraint_L.message" 
 		"golem_rigRN.placeHolderList[178]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R|golem_footB_jntPrx_R|golem_foot_jntPrx_RT.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_legB_pointConstraint_L.message" 
 		"golem_rigRN.placeHolderList[179]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R|golem_footB_jntPrx_R|golem_footB_pointConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_L|golem_legB_jntPrx_L|golem_legB_orientConstraint_L.message" 
 		"golem_rigRN.placeHolderList[180]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R|golem_footB_jntPrx_R|golem_footB_orientConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[181]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_legB_pointConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[182]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_legB_orientConstraint_R.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[183]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_COG_pointConstraint_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R|golem_footB_jntPrx_R.message" 
 		"golem_rigRN.placeHolderList[184]" ""
-		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_COG_orientConstraint_C.message" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R|golem_footB_jntPrx_R|golem_foot_jntPrx_RT.message" 
 		"golem_rigRN.placeHolderList[185]" ""
-		5 3 "golem_rigRN" "|ctrlIK_grp.message" "golem_rigRN.placeHolderList[186]" 
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R|golem_footB_jntPrx_R|golem_footB_pointConstraint_R.message" 
+		"golem_rigRN.placeHolderList[186]" ""
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_footA_jntPrx_R|golem_footB_jntPrx_R|golem_footB_orientConstraint_R.message" 
+		"golem_rigRN.placeHolderList[187]" ""
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_legB_pointConstraint_R.message" 
+		"golem_rigRN.placeHolderList[188]" ""
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_legA_jntPrx_R|golem_legB_jntPrx_R|golem_legB_orientConstraint_R.message" 
+		"golem_rigRN.placeHolderList[189]" ""
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_COG_pointConstraint_C.message" 
+		"golem_rigRN.placeHolderList[190]" ""
+		5 3 "golem_rigRN" "|golem_root_jntPrx|golem_COG_jntPrx_C|golem_COG_orientConstraint_C.message" 
+		"golem_rigRN.placeHolderList[191]" ""
+		5 3 "golem_rigRN" "|ctrlIK_grp.message" "golem_rigRN.placeHolderList[192]" 
 		""
-		5 3 "golem_rigRN" "shapeEditorManager1.message" "golem_rigRN.placeHolderList[187]" 
+		5 3 "golem_rigRN" "shapeEditorManager1.message" "golem_rigRN.placeHolderList[193]" 
 		""
-		5 3 "golem_rigRN" "poseInterpolatorManager1.message" "golem_rigRN.placeHolderList[188]" 
+		5 3 "golem_rigRN" "poseInterpolatorManager1.message" "golem_rigRN.placeHolderList[194]" 
 		""
-		5 3 "golem_rigRN" "layerManager1.message" "golem_rigRN.placeHolderList[189]" 
+		5 3 "golem_rigRN" "layerManager1.message" "golem_rigRN.placeHolderList[195]" 
 		""
-		5 3 "golem_rigRN" "defaultLayer1.message" "golem_rigRN.placeHolderList[190]" 
+		5 3 "golem_rigRN" "defaultLayer1.message" "golem_rigRN.placeHolderList[196]" 
 		""
-		5 3 "golem_rigRN" "golem_modelRN.message" "golem_rigRN.placeHolderList[191]" 
+		5 3 "golem_rigRN" "golem_modelRN.message" "golem_rigRN.placeHolderList[197]" 
 		""
-		5 3 "golem_rigRN" "uiConfigurationScriptNode1.message" "golem_rigRN.placeHolderList[192]" 
+		5 3 "golem_rigRN" "uiConfigurationScriptNode1.message" "golem_rigRN.placeHolderList[198]" 
 		""
-		5 3 "golem_rigRN" "sceneConfigurationScriptNode1.message" "golem_rigRN.placeHolderList[193]" 
+		5 3 "golem_rigRN" "sceneConfigurationScriptNode1.message" "golem_rigRN.placeHolderList[199]" 
 		""
-		5 3 "golem_rigRN" "golem_connect_jnt_layer.message" "golem_rigRN.placeHolderList[194]" 
+		5 3 "golem_rigRN" "golem_connect_jnt_layer.message" "golem_rigRN.placeHolderList[200]" 
 		""
-		5 3 "golem_rigRN" "hearFKIK_divide.message" "golem_rigRN.placeHolderList[195]" 
+		5 3 "golem_rigRN" "hearFKIK_divide.message" "golem_rigRN.placeHolderList[201]" 
 		""
-		5 3 "golem_rigRN" "armFKIK_divide_L.message" "golem_rigRN.placeHolderList[196]" 
+		5 3 "golem_rigRN" "armFKIK_divide_L.message" "golem_rigRN.placeHolderList[202]" 
 		""
-		5 3 "golem_rigRN" "armFKIK_divide_R.message" "golem_rigRN.placeHolderList[197]" 
+		5 3 "golem_rigRN" "armFKIK_divide_R.message" "golem_rigRN.placeHolderList[203]" 
 		""
-		5 3 "golem_rigRN" "legFKIK_divide_L.message" "golem_rigRN.placeHolderList[198]" 
+		5 3 "golem_rigRN" "legFKIK_divide_L.message" "golem_rigRN.placeHolderList[204]" 
 		""
-		5 3 "golem_rigRN" "legFKIK_divide_R.message" "golem_rigRN.placeHolderList[199]" 
+		5 3 "golem_rigRN" "legFKIK_divide_R.message" "golem_rigRN.placeHolderList[205]" 
 		""
-		5 3 "golem_rigRN" "shakeFKIK_divide.message" "golem_rigRN.placeHolderList[200]" 
+		5 3 "golem_rigRN" "shakeFKIK_divide.message" "golem_rigRN.placeHolderList[206]" 
 		""
-		5 3 "golem_rigRN" "scaleSwitch_divide.message" "golem_rigRN.placeHolderList[201]" 
+		5 3 "golem_rigRN" "scaleSwitch_divide.message" "golem_rigRN.placeHolderList[207]" 
 		""
-		5 3 "golem_rigRN" "hearFKIK_divide1.message" "golem_rigRN.placeHolderList[202]" 
+		5 3 "golem_rigRN" "hearFKIK_divide1.message" "golem_rigRN.placeHolderList[208]" 
 		""
-		5 3 "golem_rigRN" "armFKIK_divide_L1.message" "golem_rigRN.placeHolderList[203]" 
+		5 3 "golem_rigRN" "armFKIK_divide_L1.message" "golem_rigRN.placeHolderList[209]" 
 		""
-		5 3 "golem_rigRN" "armFKIK_divide_R1.message" "golem_rigRN.placeHolderList[204]" 
+		5 3 "golem_rigRN" "armFKIK_divide_R1.message" "golem_rigRN.placeHolderList[210]" 
 		""
-		5 3 "golem_rigRN" "legFKIK_divide_L1.message" "golem_rigRN.placeHolderList[205]" 
+		5 3 "golem_rigRN" "legFKIK_divide_L1.message" "golem_rigRN.placeHolderList[211]" 
 		""
-		5 3 "golem_rigRN" "legFKIK_divide_R1.message" "golem_rigRN.placeHolderList[206]" 
+		5 3 "golem_rigRN" "legFKIK_divide_R1.message" "golem_rigRN.placeHolderList[212]" 
 		""
-		5 3 "golem_rigRN" "shakeFKIK_divide1.message" "golem_rigRN.placeHolderList[207]" 
+		5 3 "golem_rigRN" "shakeFKIK_divide1.message" "golem_rigRN.placeHolderList[213]" 
 		""
-		5 3 "golem_rigRN" "scaleSwitch_divide1.message" "golem_rigRN.placeHolderList[208]" 
+		5 3 "golem_rigRN" "scaleSwitch_divide1.message" "golem_rigRN.placeHolderList[214]" 
 		""
-		5 3 "golem_rigRN" "golem_ctrl_layer.message" "golem_rigRN.placeHolderList[209]" 
+		5 3 "golem_rigRN" "golem_ctrl_layer.message" "golem_rigRN.placeHolderList[215]" 
 		""
-		5 3 "golem_rigRN" "golem_lowLeg_translateBlend_L.message" "golem_rigRN.placeHolderList[210]" 
+		5 3 "golem_rigRN" "golem_lowLeg_translateBlend_L.message" "golem_rigRN.placeHolderList[216]" 
 		""
-		5 3 "golem_rigRN" "golem_lowLeg_rotateBlend_L.message" "golem_rigRN.placeHolderList[211]" 
+		5 3 "golem_rigRN" "golem_lowLeg_rotateBlend_L.message" "golem_rigRN.placeHolderList[217]" 
 		""
-		5 3 "golem_rigRN" "golem_foot_rotateBlend_L.message" "golem_rigRN.placeHolderList[212]" 
+		5 3 "golem_rigRN" "golem_foot_rotateBlend_L.message" "golem_rigRN.placeHolderList[218]" 
 		""
-		5 3 "golem_rigRN" "golem_foot_translateBlend_L.message" "golem_rigRN.placeHolderList[213]" 
+		5 3 "golem_rigRN" "golem_foot_translateBlend_L.message" "golem_rigRN.placeHolderList[219]" 
 		""
-		5 3 "golem_rigRN" "golem_foot_rotateBlend_LT.message" "golem_rigRN.placeHolderList[214]" 
+		5 3 "golem_rigRN" "golem_foot_rotateBlend_LT.message" "golem_rigRN.placeHolderList[220]" 
 		""
-		5 3 "golem_rigRN" "golem_foot_translateBlend_LT.message" "golem_rigRN.placeHolderList[215]" 
+		5 3 "golem_rigRN" "golem_foot_translateBlend_LT.message" "golem_rigRN.placeHolderList[221]" 
 		""
-		5 3 "golem_rigRN" "golem_lowLeg_translateBlend_R.message" "golem_rigRN.placeHolderList[216]" 
+		5 3 "golem_rigRN" "golem_lowLeg_translateBlend_R.message" "golem_rigRN.placeHolderList[222]" 
 		""
-		5 3 "golem_rigRN" "golem_foot_translateBlend_R.message" "golem_rigRN.placeHolderList[217]" 
+		5 3 "golem_rigRN" "golem_foot_translateBlend_R.message" "golem_rigRN.placeHolderList[223]" 
 		""
-		5 3 "golem_rigRN" "golem_lowLeg_rotateBlend_R.message" "golem_rigRN.placeHolderList[218]" 
+		5 3 "golem_rigRN" "golem_lowLeg_rotateBlend_R.message" "golem_rigRN.placeHolderList[224]" 
 		""
-		5 3 "golem_rigRN" "golem_foot_rotateBlend_R.message" "golem_rigRN.placeHolderList[219]" 
+		5 3 "golem_rigRN" "golem_foot_rotateBlend_R.message" "golem_rigRN.placeHolderList[225]" 
 		""
-		5 3 "golem_rigRN" "golem_foot_rotateBlend_RT.message" "golem_rigRN.placeHolderList[220]" 
+		5 3 "golem_rigRN" "golem_foot_rotateBlend_RT.message" "golem_rigRN.placeHolderList[226]" 
 		""
-		5 3 "golem_rigRN" "golem_foot_translateBlend_RT.message" "golem_rigRN.placeHolderList[221]" 
+		5 3 "golem_rigRN" "golem_foot_translateBlend_RT.message" "golem_rigRN.placeHolderList[227]" 
 		""
-		5 3 "golem_rigRN" "golem_hand_rotateBlend_RT.message" "golem_rigRN.placeHolderList[222]" 
+		5 3 "golem_rigRN" "golem_hand_rotateBlend_RT.message" "golem_rigRN.placeHolderList[228]" 
 		""
-		5 3 "golem_rigRN" "golem_hand_rotateBlend_R.message" "golem_rigRN.placeHolderList[223]" 
+		5 3 "golem_rigRN" "golem_hand_rotateBlend_R.message" "golem_rigRN.placeHolderList[229]" 
 		""
-		5 3 "golem_rigRN" "golem_hand_translateBlend_RT.message" "golem_rigRN.placeHolderList[224]" 
+		5 3 "golem_rigRN" "golem_hand_translateBlend_RT.message" "golem_rigRN.placeHolderList[230]" 
 		""
-		5 3 "golem_rigRN" "golem_hand_translateBlend_R.message" "golem_rigRN.placeHolderList[225]" 
+		5 3 "golem_rigRN" "golem_hand_translateBlend_R.message" "golem_rigRN.placeHolderList[231]" 
 		""
-		5 3 "golem_rigRN" "golem_arm_translateBlend_R.message" "golem_rigRN.placeHolderList[226]" 
+		5 3 "golem_rigRN" "golem_arm_translateBlend_R.message" "golem_rigRN.placeHolderList[232]" 
 		""
-		5 3 "golem_rigRN" "golem_arm_rotateBlend_R.message" "golem_rigRN.placeHolderList[227]" 
+		5 3 "golem_rigRN" "golem_arm_rotateBlend_R.message" "golem_rigRN.placeHolderList[233]" 
 		""
-		5 3 "golem_rigRN" "golem_hand_rotateBlend_LT.message" "golem_rigRN.placeHolderList[228]" 
+		5 3 "golem_rigRN" "golem_hand_rotateBlend_LT.message" "golem_rigRN.placeHolderList[234]" 
 		""
-		5 3 "golem_rigRN" "golem_hand_rotateBlend_L.message" "golem_rigRN.placeHolderList[229]" 
+		5 3 "golem_rigRN" "golem_hand_rotateBlend_L.message" "golem_rigRN.placeHolderList[235]" 
 		""
-		5 3 "golem_rigRN" "golem_hand_translateBlend_LT.message" "golem_rigRN.placeHolderList[230]" 
+		5 3 "golem_rigRN" "golem_hand_translateBlend_LT.message" "golem_rigRN.placeHolderList[236]" 
 		""
-		5 3 "golem_rigRN" "golem_hand_translateBlend_L.message" "golem_rigRN.placeHolderList[231]" 
+		5 3 "golem_rigRN" "golem_hand_translateBlend_L.message" "golem_rigRN.placeHolderList[237]" 
 		""
-		5 3 "golem_rigRN" "golem_arm_rotateBlend_L.message" "golem_rigRN.placeHolderList[232]" 
+		5 3 "golem_rigRN" "golem_arm_rotateBlend_L.message" "golem_rigRN.placeHolderList[238]" 
 		""
-		5 3 "golem_rigRN" "golem_arm_translateBlend_L.message" "golem_rigRN.placeHolderList[233]" 
+		5 3 "golem_rigRN" "golem_arm_translateBlend_L.message" "golem_rigRN.placeHolderList[239]" 
 		""
-		5 3 "golem_rigRN" "golem_skin_jnt_layer.message" "golem_rigRN.placeHolderList[234]" 
+		5 3 "golem_rigRN" "golem_skin_jnt_layer.message" "golem_rigRN.placeHolderList[240]" 
 		""
-		5 3 "golem_rigRN" "sharedReferenceNode.message" "golem_rigRN.placeHolderList[235]" 
+		5 3 "golem_rigRN" "sharedReferenceNode.message" "golem_rigRN.placeHolderList[241]" 
 		""
-		5 3 "golem_rigRN" "skinCluster1.message" "golem_rigRN.placeHolderList[236]" 
+		5 3 "golem_rigRN" "skinCluster1.message" "golem_rigRN.placeHolderList[242]" 
 		""
-		5 3 "golem_rigRN" "tweak1.message" "golem_rigRN.placeHolderList[237]" 
+		5 3 "golem_rigRN" "tweak1.message" "golem_rigRN.placeHolderList[243]" 
 		""
-		5 3 "golem_rigRN" "skinCluster1Set.message" "golem_rigRN.placeHolderList[238]" 
+		5 3 "golem_rigRN" "skinCluster1Set.message" "golem_rigRN.placeHolderList[244]" 
 		""
-		5 3 "golem_rigRN" "tweakSet1.message" "golem_rigRN.placeHolderList[239]" 
+		5 3 "golem_rigRN" "tweakSet1.message" "golem_rigRN.placeHolderList[245]" 
 		""
-		5 3 "golem_rigRN" "bindPose1.message" "golem_rigRN.placeHolderList[240]" 
+		5 3 "golem_rigRN" "bindPose1.message" "golem_rigRN.placeHolderList[246]" 
 		""
-		5 3 "golem_rigRN" "skinCluster2.message" "golem_rigRN.placeHolderList[241]" 
+		5 3 "golem_rigRN" "skinCluster2.message" "golem_rigRN.placeHolderList[247]" 
 		""
-		5 3 "golem_rigRN" "tweak2.message" "golem_rigRN.placeHolderList[242]" 
+		5 3 "golem_rigRN" "tweak2.message" "golem_rigRN.placeHolderList[248]" 
 		""
-		5 3 "golem_rigRN" "skinCluster2Set.message" "golem_rigRN.placeHolderList[243]" 
+		5 3 "golem_rigRN" "skinCluster2Set.message" "golem_rigRN.placeHolderList[249]" 
 		""
-		5 3 "golem_rigRN" "tweakSet2.message" "golem_rigRN.placeHolderList[244]" 
+		5 3 "golem_rigRN" "tweakSet2.message" "golem_rigRN.placeHolderList[250]" 
 		""
-		5 3 "golem_rigRN" "bindPose2.message" "golem_rigRN.placeHolderList[245]" 
+		5 3 "golem_rigRN" "bindPose2.message" "golem_rigRN.placeHolderList[251]" 
 		""
-		5 3 "golem_rigRN" "golem_geo_layer.message" "golem_rigRN.placeHolderList[246]" 
+		5 3 "golem_rigRN" "golem_geo_layer.message" "golem_rigRN.placeHolderList[252]" 
 		""
-		5 3 "golem_rigRN" "golem_legB_driv_L_translateX.message" "golem_rigRN.placeHolderList[247]" 
+		5 3 "golem_rigRN" "golem_legB_driv_L_translateX.message" "golem_rigRN.placeHolderList[253]" 
 		""
-		5 3 "golem_rigRN" "golem_footB_driv_L_translateX.message" "golem_rigRN.placeHolderList[248]" 
+		5 3 "golem_rigRN" "golem_footB_driv_L_translateX.message" "golem_rigRN.placeHolderList[254]" 
 		""
-		5 3 "golem_rigRN" "golem_footB_driv_R_translateX.message" "golem_rigRN.placeHolderList[249]" 
+		5 3 "golem_rigRN" "golem_footB_driv_R_translateX.message" "golem_rigRN.placeHolderList[255]" 
 		""
-		5 3 "golem_rigRN" "golem_legB_driv_R_translateX.message" "golem_rigRN.placeHolderList[250]" 
+		5 3 "golem_rigRN" "golem_legB_driv_R_translateX.message" "golem_rigRN.placeHolderList[256]" 
 		""
-		5 3 "golem_rigRN" "golem_head_driv_C_translateX.message" "golem_rigRN.placeHolderList[251]" 
+		5 3 "golem_rigRN" "golem_head_driv_C_translateX.message" "golem_rigRN.placeHolderList[257]" 
 		""
-		5 3 "golem_rigRN" "golem_lowArmB_driv_L_translateX.message" "golem_rigRN.placeHolderList[252]" 
+		5 3 "golem_rigRN" "golem_lowArmB_driv_L_translateX.message" "golem_rigRN.placeHolderList[258]" 
 		""
-		5 3 "golem_rigRN" "golem_handB_driv_L_translateX.message" "golem_rigRN.placeHolderList[253]" 
+		5 3 "golem_rigRN" "golem_handB_driv_L_translateX.message" "golem_rigRN.placeHolderList[259]" 
 		""
-		5 3 "golem_rigRN" "golem_lowArmB_driv_R_translateX.message" "golem_rigRN.placeHolderList[254]" 
+		5 3 "golem_rigRN" "golem_lowArmB_driv_R_translateX.message" "golem_rigRN.placeHolderList[260]" 
 		""
-		5 3 "golem_rigRN" "golem_handB_driv_R_translateX.message" "golem_rigRN.placeHolderList[255]" 
+		5 3 "golem_rigRN" "golem_handB_driv_R_translateX.message" "golem_rigRN.placeHolderList[261]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -1187,786 +1205,942 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo2";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -649.9999741713217 -422.6190308256763 ;
 	setAttr ".tgi[0].vh" -type "double2" 651.19045031449275 421.42855468250531 ;
+createNode animCurveTL -n "golem_arm_ctrlFK_R_translateX";
+	rename -uid "D6337A90-491A-D799-DA67-FD9244D158C1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 39 ".ktv[0:38]"  0 0 15 -15 21 -15 30 -15 45 -15 51 -15 60 -15
+		 75 0 81 0 90 0 96 0 105 0 111 0 120 0 135 0 141 0 150 0 165 0 171 0 180 0 195 0 201 0
+		 210 0 225 -10 231 -10 240 -10 249 -10 255 -10 261 -10 270 -10 285 -15 291 -15 300 -15
+		 315 -15 321 -15 330 -15 345 0 351 0 360 0;
+	setAttr -s 39 ".kit[6:38]"  1 1 18 18 18 18 18 1 
+		18 18 18 1 18 18 1 18 18 1 18 1 18 18 18 1 1 
+		18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kot[6:38]"  1 1 18 18 18 18 18 1 
+		18 18 18 1 18 18 1 18 18 1 18 1 18 18 18 1 1 
+		18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kix[6:38]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".kiy[6:38]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 39 ".kox[6:38]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".koy[6:38]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "golem_arm_ctrlFK_R_translateY";
+	rename -uid "4D05534E-41C6-1318-10AD-21B284C85EA4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 39 ".ktv[0:38]"  0 0 15 -35 21 -35 30 -35 45 -35 51 -35 60 -35
+		 75 0 81 0 90 0 96 0 105 0 111 0 120 0 135 0 141 0 150 0 165 0 171 0 180 0 195 0 201 0
+		 210 0 225 -30 231 -30 240 -30 249 -30 255 -30 261 -30 270 -30 285 -35 291 -35 300 -35
+		 315 -35 321 -35 330 -35 345 0 351 0 360 0;
+	setAttr -s 39 ".kit[6:38]"  1 1 18 18 18 18 18 1 
+		18 18 18 1 18 18 1 18 18 1 18 1 18 18 18 1 1 
+		18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kot[6:38]"  1 1 18 18 18 18 18 1 
+		18 18 18 1 18 18 1 18 18 1 18 1 18 18 18 1 1 
+		18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kix[6:38]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".kiy[6:38]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 39 ".kox[6:38]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".koy[6:38]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "golem_arm_ctrlFK_R_translateZ";
+	rename -uid "9AE15A36-4C0B-26D3-A8D5-64AA0835DB1C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 39 ".ktv[0:38]"  0 0 15 0 21 5.8897747933047048e-14 30 0
+		 45 0 51 0 60 0 75 0 81 0 90 0 96 0 105 0 111 0 120 0 135 0 141 0 150 0 165 0 171 0
+		 180 0 195 0 201 0 210 0 225 0 231 0 240 0 249 0 255 0 261 0 270 0 285 0 291 0 300 0
+		 315 5.8897747933047048e-14 321 5.8897747933047048e-14 330 5.8897747933047048e-14
+		 345 0 351 0 360 0;
+	setAttr -s 39 ".kit[2:38]"  1 1 18 18 1 1 18 18 
+		18 18 18 1 18 18 18 1 18 18 1 18 18 1 18 1 18 
+		18 18 1 1 18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kot[2:38]"  1 1 18 18 1 1 18 18 
+		18 18 18 1 18 18 18 1 18 18 1 18 18 1 18 1 18 
+		18 18 1 1 18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kix[2:38]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".kiy[2:38]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 39 ".kox[2:38]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".koy[2:38]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "golem_arm_ctrlFK_R_rotateX";
+	rename -uid "14F1344F-4022-CF73-3126-5DAC97CE126C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 39 ".ktv[0:38]"  0 0 15 90 21 90 30 90 45 75 51 75 60 75
+		 75 0 81 0 90 0 96 0 105 0 111 0 120 0 135 0 141 0 150 0 165 0 171 0 180 0 195 0 201 0
+		 210 0 225 0 231 0 240 0 249 0 255 0 261 0 270 0 285 75 291 75 300 75 315 90 321 90
+		 330 90 345 0 351 0 360 0;
+	setAttr -s 39 ".kit[1:38]"  2 2 1 18 18 1 1 18 
+		18 18 18 18 1 18 18 18 1 18 18 1 18 18 1 18 1 
+		18 18 18 1 1 18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kot[1:38]"  2 2 1 18 18 1 1 18 
+		18 18 18 18 1 18 18 18 1 18 18 1 18 18 1 18 1 
+		18 18 18 1 1 18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kix[3:38]"  1 1 1 0.95402821637846502 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".kiy[3:38]"  0 0 0 -0.29971680358919595 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 39 ".kox[3:38]"  1 1 1 0.95402821637846502 1 1 1 1 1 1 1 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".koy[3:38]"  0 0 0 -0.29971680358919589 0 0 0 0 0 0 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "golem_arm_ctrlFK_R_rotateY";
+	rename -uid "81E41741-4829-765E-7B0A-0C944D5BAD9C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 39 ".ktv[0:38]"  0 0 15 -59.999999999999993 21 -50 30 -59.999999999999993
+		 45 -90 51 -85 60 -90 75 -45 81 -45 90 -45 96 -29.999999999999996 105 0 111 0 120 0
+		 135 0 141 0 150 0 165 0 171 0 180 0 195 0 201 0 210 0 225 0 231 0 240 0 249 -29.160000000000089
+		 255 -45 261 -45 270 -45 285 -90 291 -85 300 -90 315 -59.999999999999993 321 -65 330 -59.999999999999993
+		 345 0 351 -5 360 0;
+	setAttr -s 39 ".kit[1:38]"  2 2 1 18 18 1 1 18 
+		18 18 18 18 1 18 18 18 1 18 18 1 18 18 1 18 1 
+		18 18 18 1 1 18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kot[1:38]"  2 2 1 18 18 1 1 18 
+		18 18 18 18 1 18 18 18 1 18 18 1 18 18 1 18 1 
+		18 18 18 1 1 18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kix[3:38]"  1 1 1 1 0.93080155549869992 1 1 0.53702927214631513 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.53702927214631513 1 1 1 0.960200674361263 1 0.960200674361263 
+		0.960200674361263 1 0.960200674361263 1 1 1;
+	setAttr -s 39 ".kiy[3:38]"  0 0 0 0 0.36552491608808346 0 0 0.84356360806876862 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.84356360806876862 0 0 0 -0.27931105412456531 0 -0.27931105412456531 
+		-0.27931105412456531 0 -0.27931105412456531 0 0 0;
+	setAttr -s 39 ".kox[3:38]"  1 1 1 1 0.93080155549870014 1 1 0.53702927214631502 
+		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.53702927214631513 1 1 1 0.53702927214631513 1 0.53702927214631513 
+		0.69062112255336106 1 0.69062112255336106 1 1 1;
+	setAttr -s 39 ".koy[3:38]"  0 0 0 0 0.36552491608808352 0 0 0.84356360806876851 
+		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.84356360806876862 0 0 0 0.84356360806876862 0 0.84356360806876862 
+		-0.72321674834252514 0 -0.72321674834252514 0 0 0;
+createNode animCurveTA -n "golem_arm_ctrlFK_R_rotateZ";
+	rename -uid "01808214-4F43-C737-0DC2-3DB5C89FDE48";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 39 ".ktv[0:38]"  0 0 15 -20 21 -20 30 -20 45 0 51 0 60 0
+		 75 75 81 70 90 75 96 59.999999999999993 105 75 111 70 120 75 135 45 141 35 150 45
+		 165 0 171 5 180 0 195 45 201 40 210 45 225 75 231 70 240 75 249 65 255 75 261 70
+		 270 75.000000000001421 285 0 291 0 300 0 315 -20 321 -20 330 -20 345 0 351 0 360 0;
+	setAttr -s 39 ".kit[1:38]"  2 2 1 18 18 1 1 18 
+		18 18 18 18 1 18 18 18 1 18 18 1 18 18 1 18 1 
+		18 18 18 1 1 18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kot[1:38]"  2 2 1 18 18 1 1 18 
+		18 18 18 18 1 18 18 18 1 18 18 1 18 18 1 18 1 
+		18 18 18 1 1 18 1 1 18 1 18 18 18;
+	setAttr -s 39 ".kix[3:38]"  1 1 1 1 1 1 1 1 1 1 1 0.70805104357847026 
+		1 1 1 1 1 1 1 0.79478882825494945 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".kiy[3:38]"  0 0 0 0 0 0 0 0 0 0 0 -0.70616125615006609 
+		0 0 0 0 0 0 0 0.60688608361135166 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 39 ".kox[3:38]"  1 1 1 1 1 1 1 1 1 1 1 0.70805104357847026 
+		1 1 1 1 1 1 1 0.79478882825494945 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 39 ".koy[3:38]"  0 0 0 0 0 0 0 0 0 0 0 -0.70616125615006609 
+		0 0 0 0 0 0 0 0.60688608361135166 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo2";
-	rename -uid "4939F45E-4346-FBA0-2967-C9A8F0E464EC";
+	rename -uid "18057C3E-4476-9BBE-65EF-279D75AE93E0";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -559.52378729033182 -572.61902486521194 ;
 	setAttr ".tgi[0].vh" -type "double2" 560.71426343350265 571.42854872204111 ;
-	setAttr -s 258 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 2441.428466796875;
-	setAttr ".tgi[0].ni[0].y" 1320;
+	setAttr -s 264 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[0].y" 1924.2857666015625;
 	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[1].y" -4121.4287109375;
+	setAttr ".tgi[0].ni[1].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[1].y" -5191.4287109375;
 	setAttr ".tgi[0].ni[1].nvs" 18304;
-	setAttr ".tgi[0].ni[2].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[2].y" -9280;
+	setAttr ".tgi[0].ni[2].x" 2397.142822265625;
+	setAttr ".tgi[0].ni[2].y" -2561.428466796875;
 	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" 2450;
-	setAttr ".tgi[0].ni[3].y" -42.857143402099609;
+	setAttr ".tgi[0].ni[3].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[3].y" -1557.142822265625;
 	setAttr ".tgi[0].ni[3].nvs" 18304;
-	setAttr ".tgi[0].ni[4].x" -738.5714111328125;
-	setAttr ".tgi[0].ni[4].y" 2777.142822265625;
+	setAttr ".tgi[0].ni[4].x" 2412.857177734375;
+	setAttr ".tgi[0].ni[4].y" 7177.14306640625;
 	setAttr ".tgi[0].ni[4].nvs" 18304;
 	setAttr ".tgi[0].ni[5].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[5].y" -8825.7138671875;
+	setAttr ".tgi[0].ni[5].y" -4434.28564453125;
 	setAttr ".tgi[0].ni[5].nvs" 18304;
-	setAttr ".tgi[0].ni[6].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[6].y" 1437.142822265625;
+	setAttr ".tgi[0].ni[6].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[6].y" -7917.14306640625;
 	setAttr ".tgi[0].ni[6].nvs" 18304;
-	setAttr ".tgi[0].ni[7].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[7].y" -2431.428466796875;
+	setAttr ".tgi[0].ni[7].x" 2412.857177734375;
+	setAttr ".tgi[0].ni[7].y" 8901.4287109375;
 	setAttr ".tgi[0].ni[7].nvs" 18304;
 	setAttr ".tgi[0].ni[8].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[8].y" 2957.142822265625;
+	setAttr ".tgi[0].ni[8].y" 3817.142822265625;
 	setAttr ".tgi[0].ni[8].nvs" 18304;
-	setAttr ".tgi[0].ni[9].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[9].y" 3817.142822265625;
+	setAttr ".tgi[0].ni[9].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[9].y" -1464.2857666015625;
 	setAttr ".tgi[0].ni[9].nvs" 18304;
-	setAttr ".tgi[0].ni[10].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[10].y" -3731.428466796875;
+	setAttr ".tgi[0].ni[10].x" 1728.5714111328125;
+	setAttr ".tgi[0].ni[10].y" 8454.2861328125;
 	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[11].y" 24.285715103149414;
+	setAttr ".tgi[0].ni[11].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[11].y" -1405.7142333984375;
 	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" -81.428573608398438;
-	setAttr ".tgi[0].ni[12].y" -32.857143402099609;
+	setAttr ".tgi[0].ni[12].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[12].y" -2465.71435546875;
 	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[13].y" -1405.7142333984375;
+	setAttr ".tgi[0].ni[13].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[13].y" 1678.5714111328125;
 	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" 2412.857177734375;
-	setAttr ".tgi[0].ni[14].y" 8901.4287109375;
+	setAttr ".tgi[0].ni[14].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[14].y" -3211.428466796875;
 	setAttr ".tgi[0].ni[14].nvs" 18304;
 	setAttr ".tgi[0].ni[15].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[15].y" -1557.142822265625;
+	setAttr ".tgi[0].ni[15].y" -7462.85693359375;
 	setAttr ".tgi[0].ni[15].nvs" 18304;
-	setAttr ".tgi[0].ni[16].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[16].y" 2991.428466796875;
+	setAttr ".tgi[0].ni[16].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[16].y" -648.5714111328125;
 	setAttr ".tgi[0].ni[16].nvs" 18304;
-	setAttr ".tgi[0].ni[17].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[17].y" 264.28570556640625;
+	setAttr ".tgi[0].ni[17].x" 1104.2857666015625;
+	setAttr ".tgi[0].ni[17].y" 2382.857177734375;
 	setAttr ".tgi[0].ni[17].nvs" 18304;
-	setAttr ".tgi[0].ni[18].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[18].y" 4711.4287109375;
+	setAttr ".tgi[0].ni[18].x" -738.5714111328125;
+	setAttr ".tgi[0].ni[18].y" 3770;
 	setAttr ".tgi[0].ni[18].nvs" 18304;
-	setAttr ".tgi[0].ni[19].x" 2435.71435546875;
-	setAttr ".tgi[0].ni[19].y" 2228.571533203125;
+	setAttr ".tgi[0].ni[19].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[19].y" -8220;
 	setAttr ".tgi[0].ni[19].nvs" 18304;
-	setAttr ".tgi[0].ni[20].x" 2447.142822265625;
-	setAttr ".tgi[0].ni[20].y" 108.57142639160156;
+	setAttr ".tgi[0].ni[20].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[20].y" 3202.857177734375;
 	setAttr ".tgi[0].ni[20].nvs" 18304;
-	setAttr ".tgi[0].ni[21].x" -1352.857177734375;
-	setAttr ".tgi[0].ni[21].y" 3450;
+	setAttr ".tgi[0].ni[21].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[21].y" 2610;
 	setAttr ".tgi[0].ni[21].nvs" 18304;
-	setAttr ".tgi[0].ni[22].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[22].y" -2011.4285888671875;
+	setAttr ".tgi[0].ni[22].x" -1660;
+	setAttr ".tgi[0].ni[22].y" 4248.5712890625;
 	setAttr ".tgi[0].ni[22].nvs" 18304;
-	setAttr ".tgi[0].ni[23].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[23].y" 2170;
+	setAttr ".tgi[0].ni[23].x" 490;
+	setAttr ".tgi[0].ni[23].y" 468.57144165039063;
 	setAttr ".tgi[0].ni[23].nvs" 18304;
-	setAttr ".tgi[0].ni[24].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[24].y" 3482.857177734375;
+	setAttr ".tgi[0].ni[24].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[24].y" 2711.428466796875;
 	setAttr ".tgi[0].ni[24].nvs" 18304;
-	setAttr ".tgi[0].ni[25].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[25].y" -8068.5712890625;
+	setAttr ".tgi[0].ni[25].x" -738.5714111328125;
+	setAttr ".tgi[0].ni[25].y" 2777.142822265625;
 	setAttr ".tgi[0].ni[25].nvs" 18304;
-	setAttr ".tgi[0].ni[26].x" -2611.428466796875;
-	setAttr ".tgi[0].ni[26].y" 4428.5712890625;
+	setAttr ".tgi[0].ni[26].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[26].y" -1860;
 	setAttr ".tgi[0].ni[26].nvs" 18304;
-	setAttr ".tgi[0].ni[27].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[27].y" -2070;
+	setAttr ".tgi[0].ni[27].x" 2444.28564453125;
+	setAttr ".tgi[0].ni[27].y" 1017.1428833007813;
 	setAttr ".tgi[0].ni[27].nvs" 18304;
 	setAttr ".tgi[0].ni[28].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[28].y" -5645.71435546875;
+	setAttr ".tgi[0].ni[28].y" -6705.71435546875;
 	setAttr ".tgi[0].ni[28].nvs" 18304;
-	setAttr ".tgi[0].ni[29].x" 490;
-	setAttr ".tgi[0].ni[29].y" 1180;
+	setAttr ".tgi[0].ni[29].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[29].y" -98.571426391601563;
 	setAttr ".tgi[0].ni[29].nvs" 18304;
 	setAttr ".tgi[0].ni[30].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[30].y" 837.14288330078125;
+	setAttr ".tgi[0].ni[30].y" 237.14285278320313;
 	setAttr ".tgi[0].ni[30].nvs" 18304;
-	setAttr ".tgi[0].ni[31].x" 1728.5714111328125;
-	setAttr ".tgi[0].ni[31].y" 8331.4287109375;
-	setAttr ".tgi[0].ni[31].nvs" 18304;
-	setAttr ".tgi[0].ni[32].x" 2444.28564453125;
-	setAttr ".tgi[0].ni[32].y" 1017.1428833007813;
+	setAttr ".tgi[0].ni[31].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[31].y" -2327.142822265625;
+	setAttr ".tgi[0].ni[31].nvs" 1920;
+	setAttr ".tgi[0].ni[32].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[32].y" -7614.28564453125;
 	setAttr ".tgi[0].ni[32].nvs" 18304;
-	setAttr ".tgi[0].ni[33].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[33].y" -5191.4287109375;
+	setAttr ".tgi[0].ni[33].x" 2444.28564453125;
+	setAttr ".tgi[0].ni[33].y" 865.71429443359375;
 	setAttr ".tgi[0].ni[33].nvs" 18304;
-	setAttr ".tgi[0].ni[34].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[34].y" -5040;
+	setAttr ".tgi[0].ni[34].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[34].y" 2170;
 	setAttr ".tgi[0].ni[34].nvs" 18304;
-	setAttr ".tgi[0].ni[35].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[35].y" -2768.571533203125;
+	setAttr ".tgi[0].ni[35].x" -101.42857360839844;
+	setAttr ".tgi[0].ni[35].y" 97.142860412597656;
 	setAttr ".tgi[0].ni[35].nvs" 18304;
 	setAttr ".tgi[0].ni[36].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[36].y" -4282.85693359375;
+	setAttr ".tgi[0].ni[36].y" -5948.5712890625;
 	setAttr ".tgi[0].ni[36].nvs" 18304;
-	setAttr ".tgi[0].ni[37].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[37].y" -2327.142822265625;
-	setAttr ".tgi[0].ni[37].nvs" 1920;
-	setAttr ".tgi[0].ni[38].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[38].y" 960;
+	setAttr ".tgi[0].ni[37].x" -431.42855834960938;
+	setAttr ".tgi[0].ni[37].y" 1485.7142333984375;
+	setAttr ".tgi[0].ni[37].nvs" 18304;
+	setAttr ".tgi[0].ni[38].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[38].y" -8522.857421875;
 	setAttr ".tgi[0].ni[38].nvs" 18304;
-	setAttr ".tgi[0].ni[39].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[39].y" -8522.857421875;
-	setAttr ".tgi[0].ni[39].nvs" 18304;
-	setAttr ".tgi[0].ni[40].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[40].y" 3202.857177734375;
+	setAttr ".tgi[0].ni[39].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[39].y" -1062.857177734375;
+	setAttr ".tgi[0].ni[39].nvs" 1920;
+	setAttr ".tgi[0].ni[40].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[40].y" -3525.71435546875;
 	setAttr ".tgi[0].ni[40].nvs" 18304;
-	setAttr ".tgi[0].ni[41].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[41].y" -2192.857177734375;
+	setAttr ".tgi[0].ni[41].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[41].y" -4511.4287109375;
 	setAttr ".tgi[0].ni[41].nvs" 18304;
-	setAttr ".tgi[0].ni[42].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[42].y" -1980;
+	setAttr ".tgi[0].ni[42].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[42].y" -1254.2857666015625;
 	setAttr ".tgi[0].ni[42].nvs" 18304;
-	setAttr ".tgi[0].ni[43].x" 2422.857177734375;
-	setAttr ".tgi[0].ni[43].y" -2691.428466796875;
+	setAttr ".tgi[0].ni[43].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[43].y" -2951.428466796875;
 	setAttr ".tgi[0].ni[43].nvs" 18304;
-	setAttr ".tgi[0].ni[44].x" 2397.142822265625;
-	setAttr ".tgi[0].ni[44].y" -2561.428466796875;
+	setAttr ".tgi[0].ni[44].x" -738.5714111328125;
+	setAttr ".tgi[0].ni[44].y" 3647.142822265625;
 	setAttr ".tgi[0].ni[44].nvs" 18304;
-	setAttr ".tgi[0].ni[45].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[45].y" -228.57142639160156;
+	setAttr ".tgi[0].ni[45].x" 797.14288330078125;
+	setAttr ".tgi[0].ni[45].y" 2605.71435546875;
 	setAttr ".tgi[0].ni[45].nvs" 18304;
-	setAttr ".tgi[0].ni[46].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[46].y" -3828.571533203125;
+	setAttr ".tgi[0].ni[46].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[46].y" 4062.857177734375;
 	setAttr ".tgi[0].ni[46].nvs" 18304;
-	setAttr ".tgi[0].ni[47].x" -738.5714111328125;
-	setAttr ".tgi[0].ni[47].y" 2237.142822265625;
+	setAttr ".tgi[0].ni[47].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[47].y" -3677.142822265625;
 	setAttr ".tgi[0].ni[47].nvs" 18304;
-	setAttr ".tgi[0].ni[48].x" -2294.28564453125;
-	setAttr ".tgi[0].ni[48].y" 4287.14306640625;
+	setAttr ".tgi[0].ni[48].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[48].y" 2834.28564453125;
 	setAttr ".tgi[0].ni[48].nvs" 18304;
-	setAttr ".tgi[0].ni[49].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[49].y" -2631.428466796875;
+	setAttr ".tgi[0].ni[49].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[49].y" -570;
 	setAttr ".tgi[0].ni[49].nvs" 18304;
-	setAttr ".tgi[0].ni[50].x" 2117.142822265625;
-	setAttr ".tgi[0].ni[50].y" -2301.428466796875;
+	setAttr ".tgi[0].ni[50].x" 490;
+	setAttr ".tgi[0].ni[50].y" 942.85711669921875;
 	setAttr ".tgi[0].ni[50].nvs" 18304;
-	setAttr ".tgi[0].ni[51].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[51].y" -3071.428466796875;
+	setAttr ".tgi[0].ni[51].x" 2425.71435546875;
+	setAttr ".tgi[0].ni[51].y" 2682.857177734375;
 	setAttr ".tgi[0].ni[51].nvs" 18304;
-	setAttr ".tgi[0].ni[52].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[52].y" -1235.7142333984375;
+	setAttr ".tgi[0].ni[52].x" 2117.142822265625;
+	setAttr ".tgi[0].ni[52].y" -2431.428466796875;
 	setAttr ".tgi[0].ni[52].nvs" 18304;
-	setAttr ".tgi[0].ni[53].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[53].y" 4465.71435546875;
+	setAttr ".tgi[0].ni[53].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[53].y" -1800;
 	setAttr ".tgi[0].ni[53].nvs" 18304;
-	setAttr ".tgi[0].ni[54].x" 1104.2857666015625;
-	setAttr ".tgi[0].ni[54].y" 2145.71435546875;
+	setAttr ".tgi[0].ni[54].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[54].y" 2292.857177734375;
 	setAttr ".tgi[0].ni[54].nvs" 18304;
-	setAttr ".tgi[0].ni[55].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[55].y" -4131.4287109375;
+	setAttr ".tgi[0].ni[55].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[55].y" -1727.142822265625;
 	setAttr ".tgi[0].ni[55].nvs" 18304;
-	setAttr ".tgi[0].ni[56].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[56].y" -6554.28564453125;
+	setAttr ".tgi[0].ni[56].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[56].y" 3851.428466796875;
 	setAttr ".tgi[0].ni[56].nvs" 18304;
-	setAttr ".tgi[0].ni[57].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[57].y" -7917.14306640625;
+	setAttr ".tgi[0].ni[57].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[57].y" 1770;
 	setAttr ".tgi[0].ni[57].nvs" 18304;
-	setAttr ".tgi[0].ni[58].x" 2444.28564453125;
-	setAttr ".tgi[0].ni[58].y" 865.71429443359375;
+	setAttr ".tgi[0].ni[58].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[58].y" 4465.71435546875;
 	setAttr ".tgi[0].ni[58].nvs" 18304;
 	setAttr ".tgi[0].ni[59].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[59].y" -9431.4287109375;
+	setAttr ".tgi[0].ni[59].y" -2768.571533203125;
 	setAttr ".tgi[0].ni[59].nvs" 18304;
-	setAttr ".tgi[0].ni[60].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[60].y" 4957.14306640625;
+	setAttr ".tgi[0].ni[60].x" -1352.857177734375;
+	setAttr ".tgi[0].ni[60].y" 3450;
 	setAttr ".tgi[0].ni[60].nvs" 18304;
-	setAttr ".tgi[0].ni[61].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[61].y" -3222.857177734375;
+	setAttr ".tgi[0].ni[61].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[61].y" 204.28572082519531;
 	setAttr ".tgi[0].ni[61].nvs" 18304;
-	setAttr ".tgi[0].ni[62].x" 490;
-	setAttr ".tgi[0].ni[62].y" 468.57144165039063;
+	setAttr ".tgi[0].ni[62].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[62].y" 2860;
 	setAttr ".tgi[0].ni[62].nvs" 18304;
-	setAttr ".tgi[0].ni[63].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[63].y" 1082.857177734375;
+	setAttr ".tgi[0].ni[63].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[63].y" 1011.4285888671875;
 	setAttr ".tgi[0].ni[63].nvs" 18304;
-	setAttr ".tgi[0].ni[64].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[64].y" -951.4285888671875;
+	setAttr ".tgi[0].ni[64].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[64].y" -3731.428466796875;
 	setAttr ".tgi[0].ni[64].nvs" 18304;
-	setAttr ".tgi[0].ni[65].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[65].y" -4641.4287109375;
+	setAttr ".tgi[0].ni[65].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[65].y" 3940;
 	setAttr ".tgi[0].ni[65].nvs" 18304;
-	setAttr ".tgi[0].ni[66].x" -431.42855834960938;
-	setAttr ".tgi[0].ni[66].y" 1362.857177734375;
+	setAttr ".tgi[0].ni[66].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[66].y" -8825.7138671875;
 	setAttr ".tgi[0].ni[66].nvs" 18304;
-	setAttr ".tgi[0].ni[67].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[67].y" 4220;
+	setAttr ".tgi[0].ni[67].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[67].y" -800;
 	setAttr ".tgi[0].ni[67].nvs" 18304;
-	setAttr ".tgi[0].ni[68].x" 2412.857177734375;
-	setAttr ".tgi[0].ni[68].y" 9024.2861328125;
+	setAttr ".tgi[0].ni[68].x" 1104.2857666015625;
+	setAttr ".tgi[0].ni[68].y" 2145.71435546875;
 	setAttr ".tgi[0].ni[68].nvs" 18304;
-	setAttr ".tgi[0].ni[69].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[69].y" 3571.428466796875;
+	setAttr ".tgi[0].ni[69].x" 2412.857177734375;
+	setAttr ".tgi[0].ni[69].y" 7300;
 	setAttr ".tgi[0].ni[69].nvs" 18304;
-	setAttr ".tgi[0].ni[70].x" -431.42855834960938;
-	setAttr ".tgi[0].ni[70].y" 1608.5714111328125;
+	setAttr ".tgi[0].ni[70].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[70].y" 2047.142822265625;
 	setAttr ".tgi[0].ni[70].nvs" 18304;
 	setAttr ".tgi[0].ni[71].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[71].y" 3851.428466796875;
+	setAttr ".tgi[0].ni[71].y" 4097.14306640625;
 	setAttr ".tgi[0].ni[71].nvs" 18304;
-	setAttr ".tgi[0].ni[72].x" 2051.428466796875;
-	setAttr ".tgi[0].ni[72].y" 8410;
+	setAttr ".tgi[0].ni[72].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[72].y" -2011.4285888671875;
 	setAttr ".tgi[0].ni[72].nvs" 18304;
-	setAttr ".tgi[0].ni[73].x" 2437.142822265625;
-	setAttr ".tgi[0].ni[73].y" 1925.7142333984375;
+	setAttr ".tgi[0].ni[73].x" -431.42855834960938;
+	setAttr ".tgi[0].ni[73].y" 2025.7142333984375;
 	setAttr ".tgi[0].ni[73].nvs" 18304;
-	setAttr ".tgi[0].ni[74].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[74].y" -2162.857177734375;
+	setAttr ".tgi[0].ni[74].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[74].y" -4121.4287109375;
 	setAttr ".tgi[0].ni[74].nvs" 18304;
-	setAttr ".tgi[0].ni[75].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[75].y" 384.28570556640625;
+	setAttr ".tgi[0].ni[75].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[75].y" -3081.428466796875;
 	setAttr ".tgi[0].ni[75].nvs" 18304;
 	setAttr ".tgi[0].ni[76].x" 2435.71435546875;
-	setAttr ".tgi[0].ni[76].y" 2077.142822265625;
+	setAttr ".tgi[0].ni[76].y" 2228.571533203125;
 	setAttr ".tgi[0].ni[76].nvs" 18304;
-	setAttr ".tgi[0].ni[77].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[77].y" -8371.4287109375;
+	setAttr ".tgi[0].ni[77].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[77].y" 1434.2857666015625;
 	setAttr ".tgi[0].ni[77].nvs" 18304;
-	setAttr ".tgi[0].ni[78].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[78].y" -3861.428466796875;
+	setAttr ".tgi[0].ni[78].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[78].y" 3202.857177734375;
 	setAttr ".tgi[0].ni[78].nvs" 18304;
-	setAttr ".tgi[0].ni[79].x" -431.42855834960938;
-	setAttr ".tgi[0].ni[79].y" 1485.7142333984375;
+	setAttr ".tgi[0].ni[79].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[79].y" 2238.571533203125;
 	setAttr ".tgi[0].ni[79].nvs" 18304;
-	setAttr ".tgi[0].ni[80].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[80].y" -1362.857177734375;
+	setAttr ".tgi[0].ni[80].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[80].y" 4220;
 	setAttr ".tgi[0].ni[80].nvs" 18304;
-	setAttr ".tgi[0].ni[81].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[81].y" -3601.428466796875;
+	setAttr ".tgi[0].ni[81].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[81].y" 780;
 	setAttr ".tgi[0].ni[81].nvs" 18304;
-	setAttr ".tgi[0].ni[82].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[82].y" 1165.7142333984375;
+	setAttr ".tgi[0].ni[82].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[82].y" 831.4285888671875;
 	setAttr ".tgi[0].ni[82].nvs" 18304;
-	setAttr ".tgi[0].ni[83].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[83].y" 2714.28564453125;
+	setAttr ".tgi[0].ni[83].x" -431.42855834960938;
+	setAttr ".tgi[0].ni[83].y" 1362.857177734375;
 	setAttr ".tgi[0].ni[83].nvs" 18304;
-	setAttr ".tgi[0].ni[84].x" 2447.142822265625;
-	setAttr ".tgi[0].ni[84].y" 260;
+	setAttr ".tgi[0].ni[84].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[84].y" -1102.857177734375;
 	setAttr ".tgi[0].ni[84].nvs" 18304;
-	setAttr ".tgi[0].ni[85].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[85].y" 1442.857177734375;
+	setAttr ".tgi[0].ni[85].x" 2441.428466796875;
+	setAttr ".tgi[0].ni[85].y" 1320;
 	setAttr ".tgi[0].ni[85].nvs" 18304;
-	setAttr ".tgi[0].ni[86].x" -1352.857177734375;
-	setAttr ".tgi[0].ni[86].y" 3751.428466796875;
+	setAttr ".tgi[0].ni[86].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[86].y" -3991.428466796875;
 	setAttr ".tgi[0].ni[86].nvs" 18304;
-	setAttr ".tgi[0].ni[87].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[87].y" -1800;
+	setAttr ".tgi[0].ni[87].x" -1352.857177734375;
+	setAttr ".tgi[0].ni[87].y" 3751.428466796875;
 	setAttr ".tgi[0].ni[87].nvs" 18304;
-	setAttr ".tgi[0].ni[88].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[88].y" -345.71429443359375;
+	setAttr ".tgi[0].ni[88].x" -738.5714111328125;
+	setAttr ".tgi[0].ni[88].y" 2654.28564453125;
 	setAttr ".tgi[0].ni[88].nvs" 18304;
-	setAttr ".tgi[0].ni[89].x" -101.42857360839844;
-	setAttr ".tgi[0].ni[89].y" 97.142860412597656;
+	setAttr ".tgi[0].ni[89].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[89].y" 4342.85693359375;
 	setAttr ".tgi[0].ni[89].nvs" 18304;
-	setAttr ".tgi[0].ni[90].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[90].y" -2561.428466796875;
+	setAttr ".tgi[0].ni[90].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[90].y" -4381.4287109375;
 	setAttr ".tgi[0].ni[90].nvs" 18304;
-	setAttr ".tgi[0].ni[91].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[91].y" 4588.5712890625;
+	setAttr ".tgi[0].ni[91].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[91].y" -5040;
 	setAttr ".tgi[0].ni[91].nvs" 18304;
-	setAttr ".tgi[0].ni[92].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[92].y" -8977.142578125;
+	setAttr ".tgi[0].ni[92].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[92].y" 2951.428466796875;
 	setAttr ".tgi[0].ni[92].nvs" 18304;
-	setAttr ".tgi[0].ni[93].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[93].y" 2508.571533203125;
+	setAttr ".tgi[0].ni[93].x" 490;
+	setAttr ".tgi[0].ni[93].y" 591.4285888671875;
 	setAttr ".tgi[0].ni[93].nvs" 18304;
-	setAttr ".tgi[0].ni[94].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[94].y" -3374.28564453125;
+	setAttr ".tgi[0].ni[94].x" 2412.857177734375;
+	setAttr ".tgi[0].ni[94].y" 9024.2861328125;
 	setAttr ".tgi[0].ni[94].nvs" 18304;
-	setAttr ".tgi[0].ni[95].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[95].y" -9128.5712890625;
+	setAttr ".tgi[0].ni[95].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[95].y" -3601.428466796875;
 	setAttr ".tgi[0].ni[95].nvs" 18304;
-	setAttr ".tgi[0].ni[96].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[96].y" -2301.428466796875;
+	setAttr ".tgi[0].ni[96].x" 2447.142822265625;
+	setAttr ".tgi[0].ni[96].y" 260;
 	setAttr ".tgi[0].ni[96].nvs" 18304;
-	setAttr ".tgi[0].ni[97].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[97].y" 2047.142822265625;
+	setAttr ".tgi[0].ni[97].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[97].y" -1261.4285888671875;
 	setAttr ".tgi[0].ni[97].nvs" 18304;
-	setAttr ".tgi[0].ni[98].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[98].y" 2834.28564453125;
+	setAttr ".tgi[0].ni[98].x" -2294.28564453125;
+	setAttr ".tgi[0].ni[98].y" 4604.28564453125;
 	setAttr ".tgi[0].ni[98].nvs" 18304;
-	setAttr ".tgi[0].ni[99].x" -1660;
-	setAttr ".tgi[0].ni[99].y" 4248.5712890625;
+	setAttr ".tgi[0].ni[99].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[99].y" -1604.2857666015625;
 	setAttr ".tgi[0].ni[99].nvs" 18304;
 	setAttr ".tgi[0].ni[100].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[100].y" -2314.28564453125;
+	setAttr ".tgi[0].ni[100].y" -5494.28564453125;
 	setAttr ".tgi[0].ni[100].nvs" 18304;
-	setAttr ".tgi[0].ni[101].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[101].y" 3448.571533203125;
+	setAttr ".tgi[0].ni[101].x" -81.428573608398438;
+	setAttr ".tgi[0].ni[101].y" -32.857143402099609;
 	setAttr ".tgi[0].ni[101].nvs" 18304;
-	setAttr ".tgi[0].ni[102].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[102].y" 2591.428466796875;
+	setAttr ".tgi[0].ni[102].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[102].y" -9431.4287109375;
 	setAttr ".tgi[0].ni[102].nvs" 18304;
-	setAttr ".tgi[0].ni[103].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[103].y" 1707.142822265625;
+	setAttr ".tgi[0].ni[103].x" 2438.571533203125;
+	setAttr ".tgi[0].ni[103].y" 1622.857177734375;
 	setAttr ".tgi[0].ni[103].nvs" 18304;
-	setAttr ".tgi[0].ni[104].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[104].y" -2315.71435546875;
+	setAttr ".tgi[0].ni[104].x" 797.14288330078125;
+	setAttr ".tgi[0].ni[104].y" 2425.71435546875;
 	setAttr ".tgi[0].ni[104].nvs" 18304;
-	setAttr ".tgi[0].ni[105].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[105].y" -2102.857177734375;
-	setAttr ".tgi[0].ni[105].nvs" 1920;
-	setAttr ".tgi[0].ni[106].x" 490;
-	setAttr ".tgi[0].ni[106].y" 1474.2857666015625;
-	setAttr ".tgi[0].ni[106].nvs" 18304;
-	setAttr ".tgi[0].ni[107].x" 797.14288330078125;
-	setAttr ".tgi[0].ni[107].y" 2605.71435546875;
+	setAttr ".tgi[0].ni[105].x" 2450;
+	setAttr ".tgi[0].ni[105].y" -42.857143402099609;
+	setAttr ".tgi[0].ni[105].nvs" 18304;
+	setAttr ".tgi[0].ni[106].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[106].y" -2102.857177734375;
+	setAttr ".tgi[0].ni[106].nvs" 1920;
+	setAttr ".tgi[0].ni[107].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[107].y" 837.14288330078125;
 	setAttr ".tgi[0].ni[107].nvs" 18304;
 	setAttr ".tgi[0].ni[108].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[108].y" -1254.2857666015625;
+	setAttr ".tgi[0].ni[108].y" -7008.5712890625;
 	setAttr ".tgi[0].ni[108].nvs" 18304;
-	setAttr ".tgi[0].ni[109].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[109].y" 3360;
+	setAttr ".tgi[0].ni[109].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[109].y" -4771.4287109375;
 	setAttr ".tgi[0].ni[109].nvs" 18304;
-	setAttr ".tgi[0].ni[110].x" -431.42855834960938;
-	setAttr ".tgi[0].ni[110].y" 2800;
+	setAttr ".tgi[0].ni[110].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[110].y" 3728.571533203125;
 	setAttr ".tgi[0].ni[110].nvs" 18304;
-	setAttr ".tgi[0].ni[111].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[111].y" -870;
+	setAttr ".tgi[0].ni[111].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[111].y" 3360;
 	setAttr ".tgi[0].ni[111].nvs" 18304;
-	setAttr ".tgi[0].ni[112].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[112].y" 708.5714111328125;
+	setAttr ".tgi[0].ni[112].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[112].y" -4737.14306640625;
 	setAttr ".tgi[0].ni[112].nvs" 18304;
-	setAttr ".tgi[0].ni[113].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[113].y" -4771.4287109375;
+	setAttr ".tgi[0].ni[113].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[113].y" -2192.857177734375;
 	setAttr ".tgi[0].ni[113].nvs" 18304;
-	setAttr ".tgi[0].ni[114].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[114].y" -4511.4287109375;
+	setAttr ".tgi[0].ni[114].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[114].y" 264.28570556640625;
 	setAttr ".tgi[0].ni[114].nvs" 18304;
-	setAttr ".tgi[0].ni[115].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[115].y" -2821.428466796875;
+	setAttr ".tgi[0].ni[115].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[115].y" 3605.71435546875;
 	setAttr ".tgi[0].ni[115].nvs" 18304;
-	setAttr ".tgi[0].ni[116].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[116].y" -351.42855834960938;
+	setAttr ".tgi[0].ni[116].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[116].y" -4282.85693359375;
 	setAttr ".tgi[0].ni[116].nvs" 18304;
 	setAttr ".tgi[0].ni[117].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[117].y" -5494.28564453125;
+	setAttr ".tgi[0].ni[117].y" -497.14285278320313;
 	setAttr ".tgi[0].ni[117].nvs" 18304;
-	setAttr ".tgi[0].ni[118].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[118].y" 4185.71435546875;
+	setAttr ".tgi[0].ni[118].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[118].y" 2680;
 	setAttr ".tgi[0].ni[118].nvs" 18304;
-	setAttr ".tgi[0].ni[119].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[119].y" -648.5714111328125;
+	setAttr ".tgi[0].ni[119].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[119].y" 2518.571533203125;
 	setAttr ".tgi[0].ni[119].nvs" 18304;
-	setAttr ".tgi[0].ni[120].x" 490;
-	setAttr ".tgi[0].ni[120].y" 591.4285888671875;
+	setAttr ".tgi[0].ni[120].x" -2611.428466796875;
+	setAttr ".tgi[0].ni[120].y" 4428.5712890625;
 	setAttr ".tgi[0].ni[120].nvs" 18304;
-	setAttr ".tgi[0].ni[121].x" -738.5714111328125;
-	setAttr ".tgi[0].ni[121].y" 3770;
+	setAttr ".tgi[0].ni[121].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[121].y" 3694.28564453125;
 	setAttr ".tgi[0].ni[121].nvs" 18304;
-	setAttr ".tgi[0].ni[122].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[122].y" -2428.571533203125;
-	setAttr ".tgi[0].ni[122].nvs" 1920;
-	setAttr ".tgi[0].ni[123].x" 2437.142822265625;
-	setAttr ".tgi[0].ni[123].y" 1774.2857666015625;
+	setAttr ".tgi[0].ni[122].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[122].y" -2162.857177734375;
+	setAttr ".tgi[0].ni[122].nvs" 18304;
+	setAttr ".tgi[0].ni[123].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[123].y" 4308.5712890625;
 	setAttr ".tgi[0].ni[123].nvs" 18304;
-	setAttr ".tgi[0].ni[124].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[124].y" -4434.28564453125;
+	setAttr ".tgi[0].ni[124].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[124].y" 4185.71435546875;
 	setAttr ".tgi[0].ni[124].nvs" 18304;
-	setAttr ".tgi[0].ni[125].x" -738.5714111328125;
-	setAttr ".tgi[0].ni[125].y" 2417.142822265625;
+	setAttr ".tgi[0].ni[125].x" 2435.71435546875;
+	setAttr ".tgi[0].ni[125].y" 2077.142822265625;
 	setAttr ".tgi[0].ni[125].nvs" 18304;
-	setAttr ".tgi[0].ni[126].x" -431.42855834960938;
-	setAttr ".tgi[0].ni[126].y" 1788.5714111328125;
+	setAttr ".tgi[0].ni[126].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[126].y" 3448.571533203125;
 	setAttr ".tgi[0].ni[126].nvs" 18304;
-	setAttr ".tgi[0].ni[127].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[127].y" 1924.2857666015625;
+	setAttr ".tgi[0].ni[127].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[127].y" -3341.428466796875;
 	setAttr ".tgi[0].ni[127].nvs" 18304;
-	setAttr ".tgi[0].ni[128].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[128].y" -4720;
+	setAttr ".tgi[0].ni[128].x" 2440;
+	setAttr ".tgi[0].ni[128].y" 1471.4285888671875;
 	setAttr ".tgi[0].ni[128].nvs" 18304;
 	setAttr ".tgi[0].ni[129].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[129].y" -1481.4285888671875;
+	setAttr ".tgi[0].ni[129].y" -1235.7142333984375;
 	setAttr ".tgi[0].ni[129].nvs" 18304;
-	setAttr ".tgi[0].ni[130].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[130].y" -3980;
+	setAttr ".tgi[0].ni[130].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[130].y" 1707.142822265625;
 	setAttr ".tgi[0].ni[130].nvs" 18304;
-	setAttr ".tgi[0].ni[131].x" -1045.7142333984375;
-	setAttr ".tgi[0].ni[131].y" 3897.142822265625;
+	setAttr ".tgi[0].ni[131].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[131].y" 4957.14306640625;
 	setAttr ".tgi[0].ni[131].nvs" 18304;
-	setAttr ".tgi[0].ni[132].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[132].y" 2238.571533203125;
+	setAttr ".tgi[0].ni[132].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[132].y" -5342.85693359375;
 	setAttr ".tgi[0].ni[132].nvs" 18304;
 	setAttr ".tgi[0].ni[133].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[133].y" 1801.4285888671875;
+	setAttr ".tgi[0].ni[133].y" -870;
 	setAttr ".tgi[0].ni[133].nvs" 18304;
-	setAttr ".tgi[0].ni[134].x" 2430;
-	setAttr ".tgi[0].ni[134].y" 2531.428466796875;
+	setAttr ".tgi[0].ni[134].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[134].y" -2821.428466796875;
 	setAttr ".tgi[0].ni[134].nvs" 18304;
-	setAttr ".tgi[0].ni[135].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[135].y" 4062.857177734375;
+	setAttr ".tgi[0].ni[135].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[135].y" -2314.28564453125;
 	setAttr ".tgi[0].ni[135].nvs" 18304;
-	setAttr ".tgi[0].ni[136].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[136].y" -3991.428466796875;
+	setAttr ".tgi[0].ni[136].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[136].y" 3482.857177734375;
 	setAttr ".tgi[0].ni[136].nvs" 18304;
-	setAttr ".tgi[0].ni[137].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[137].y" -7160;
+	setAttr ".tgi[0].ni[137].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[137].y" -2315.71435546875;
 	setAttr ".tgi[0].ni[137].nvs" 18304;
-	setAttr ".tgi[0].ni[138].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[138].y" 4308.5712890625;
+	setAttr ".tgi[0].ni[138].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[138].y" 1997.142822265625;
 	setAttr ".tgi[0].ni[138].nvs" 18304;
-	setAttr ".tgi[0].ni[139].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[139].y" -1727.142822265625;
+	setAttr ".tgi[0].ni[139].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[139].y" -7160;
 	setAttr ".tgi[0].ni[139].nvs" 18304;
-	setAttr ".tgi[0].ni[140].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[140].y" -2617.142822265625;
+	setAttr ".tgi[0].ni[140].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[140].y" -4720;
 	setAttr ".tgi[0].ni[140].nvs" 18304;
-	setAttr ".tgi[0].ni[141].x" 2422.857177734375;
-	setAttr ".tgi[0].ni[141].y" 2985.71435546875;
+	setAttr ".tgi[0].ni[141].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[141].y" 1801.4285888671875;
 	setAttr ".tgi[0].ni[141].nvs" 18304;
-	setAttr ".tgi[0].ni[142].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[142].y" -2951.428466796875;
+	setAttr ".tgi[0].ni[142].x" 2412.857177734375;
+	setAttr ".tgi[0].ni[142].y" 8655.7138671875;
 	setAttr ".tgi[0].ni[142].nvs" 18304;
-	setAttr ".tgi[0].ni[143].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[143].y" 2610;
+	setAttr ".tgi[0].ni[143].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[143].y" 2714.28564453125;
 	setAttr ".tgi[0].ni[143].nvs" 18304;
-	setAttr ".tgi[0].ni[144].x" 2438.571533203125;
-	setAttr ".tgi[0].ni[144].y" 1622.857177734375;
+	setAttr ".tgi[0].ni[144].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[144].y" 960;
 	setAttr ".tgi[0].ni[144].nvs" 18304;
-	setAttr ".tgi[0].ni[145].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[145].y" -4737.14306640625;
+	setAttr ".tgi[0].ni[145].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[145].y" -2301.428466796875;
 	setAttr ".tgi[0].ni[145].nvs" 18304;
-	setAttr ".tgi[0].ni[146].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[146].y" 204.28572082519531;
+	setAttr ".tgi[0].ni[146].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[146].y" -3828.571533203125;
 	setAttr ".tgi[0].ni[146].nvs" 18304;
-	setAttr ".tgi[0].ni[147].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[147].y" -5948.5712890625;
+	setAttr ".tgi[0].ni[147].x" 2450;
+	setAttr ".tgi[0].ni[147].y" -194.28572082519531;
 	setAttr ".tgi[0].ni[147].nvs" 18304;
-	setAttr ".tgi[0].ni[148].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[148].y" -98.571426391601563;
+	setAttr ".tgi[0].ni[148].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[148].y" -951.4285888671875;
 	setAttr ".tgi[0].ni[148].nvs" 18304;
-	setAttr ".tgi[0].ni[149].x" 2412.857177734375;
-	setAttr ".tgi[0].ni[149].y" 8778.5712890625;
+	setAttr ".tgi[0].ni[149].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[149].y" -2530;
 	setAttr ".tgi[0].ni[149].nvs" 18304;
-	setAttr ".tgi[0].ni[150].x" 1728.5714111328125;
-	setAttr ".tgi[0].ni[150].y" 8454.2861328125;
+	setAttr ".tgi[0].ni[150].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[150].y" 3325.71435546875;
 	setAttr ".tgi[0].ni[150].nvs" 18304;
-	setAttr ".tgi[0].ni[151].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[151].y" -4585.71435546875;
+	setAttr ".tgi[0].ni[151].x" 2444.28564453125;
+	setAttr ".tgi[0].ni[151].y" 1168.5714111328125;
 	setAttr ".tgi[0].ni[151].nvs" 18304;
-	setAttr ".tgi[0].ni[152].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[152].y" 2711.428466796875;
+	setAttr ".tgi[0].ni[152].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[152].y" 2058.571533203125;
 	setAttr ".tgi[0].ni[152].nvs" 18304;
-	setAttr ".tgi[0].ni[153].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[153].y" -3081.428466796875;
+	setAttr ".tgi[0].ni[153].x" -1987.142822265625;
+	setAttr ".tgi[0].ni[153].y" 4535.71435546875;
 	setAttr ".tgi[0].ni[153].nvs" 18304;
-	setAttr ".tgi[0].ni[154].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[154].y" 1134.2857666015625;
+	setAttr ".tgi[0].ni[154].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[154].y" 1082.857177734375;
 	setAttr ".tgi[0].ni[154].nvs" 18304;
-	setAttr ".tgi[0].ni[155].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[155].y" 1314.2857666015625;
+	setAttr ".tgi[0].ni[155].x" 2412.857177734375;
+	setAttr ".tgi[0].ni[155].y" 8778.5712890625;
 	setAttr ".tgi[0].ni[155].nvs" 18304;
-	setAttr ".tgi[0].ni[156].x" 2431.428466796875;
-	setAttr ".tgi[0].ni[156].y" 2380;
+	setAttr ".tgi[0].ni[156].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[156].y" -2561.428466796875;
 	setAttr ".tgi[0].ni[156].nvs" 18304;
 	setAttr ".tgi[0].ni[157].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[157].y" -7008.5712890625;
+	setAttr ".tgi[0].ni[157].y" -4131.4287109375;
 	setAttr ".tgi[0].ni[157].nvs" 18304;
-	setAttr ".tgi[0].ni[158].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[158].y" -2530;
+	setAttr ".tgi[0].ni[158].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[158].y" 1555.7142333984375;
 	setAttr ".tgi[0].ni[158].nvs" 18304;
-	setAttr ".tgi[0].ni[159].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[159].y" -6100;
+	setAttr ".tgi[0].ni[159].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[159].y" 4834.28564453125;
 	setAttr ".tgi[0].ni[159].nvs" 18304;
-	setAttr ".tgi[0].ni[160].x" 1104.2857666015625;
-	setAttr ".tgi[0].ni[160].y" 2382.857177734375;
+	setAttr ".tgi[0].ni[160].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[160].y" 1442.857177734375;
 	setAttr ".tgi[0].ni[160].nvs" 18304;
-	setAttr ".tgi[0].ni[161].x" 490;
-	setAttr ".tgi[0].ni[161].y" 942.85711669921875;
+	setAttr ".tgi[0].ni[161].x" -431.42855834960938;
+	setAttr ".tgi[0].ni[161].y" 2922.857177734375;
 	setAttr ".tgi[0].ni[161].nvs" 18304;
-	setAttr ".tgi[0].ni[162].x" -1987.142822265625;
-	setAttr ".tgi[0].ni[162].y" 4412.85693359375;
-	setAttr ".tgi[0].ni[162].nvs" 18304;
+	setAttr ".tgi[0].ni[162].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[162].y" -2428.571533203125;
+	setAttr ".tgi[0].ni[162].nvs" 1920;
 	setAttr ".tgi[0].ni[163].x" -1987.142822265625;
 	setAttr ".tgi[0].ni[163].y" 4085.71435546875;
 	setAttr ".tgi[0].ni[163].nvs" 18304;
-	setAttr ".tgi[0].ni[164].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[164].y" 985.71429443359375;
+	setAttr ".tgi[0].ni[164].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[164].y" 24.285715103149414;
 	setAttr ".tgi[0].ni[164].nvs" 18304;
-	setAttr ".tgi[0].ni[165].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[165].y" -7614.28564453125;
+	setAttr ".tgi[0].ni[165].x" 490;
+	setAttr ".tgi[0].ni[165].y" 1474.2857666015625;
 	setAttr ".tgi[0].ni[165].nvs" 18304;
-	setAttr ".tgi[0].ni[166].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[166].y" 2834.28564453125;
+	setAttr ".tgi[0].ni[166].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[166].y" -4641.4287109375;
 	setAttr ".tgi[0].ni[166].nvs" 18304;
-	setAttr ".tgi[0].ni[167].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[167].y" 2767.142822265625;
+	setAttr ".tgi[0].ni[167].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[167].y" -6100;
 	setAttr ".tgi[0].ni[167].nvs" 18304;
-	setAttr ".tgi[0].ni[168].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[168].y" -7311.4287109375;
+	setAttr ".tgi[0].ni[168].x" -738.5714111328125;
+	setAttr ".tgi[0].ni[168].y" 2417.142822265625;
 	setAttr ".tgi[0].ni[168].nvs" 18304;
-	setAttr ".tgi[0].ni[169].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[169].y" -1604.2857666015625;
+	setAttr ".tgi[0].ni[169].x" 2437.142822265625;
+	setAttr ".tgi[0].ni[169].y" 1774.2857666015625;
 	setAttr ".tgi[0].ni[169].nvs" 18304;
-	setAttr ".tgi[0].ni[170].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[170].y" -3677.142822265625;
+	setAttr ".tgi[0].ni[170].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[170].y" 2868.571533203125;
 	setAttr ".tgi[0].ni[170].nvs" 18304;
-	setAttr ".tgi[0].ni[171].x" 2412.857177734375;
-	setAttr ".tgi[0].ni[171].y" 7177.14306640625;
+	setAttr ".tgi[0].ni[171].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[171].y" -2631.428466796875;
 	setAttr ".tgi[0].ni[171].nvs" 18304;
-	setAttr ".tgi[0].ni[172].x" 2412.857177734375;
-	setAttr ".tgi[0].ni[172].y" 7300;
+	setAttr ".tgi[0].ni[172].x" 2437.142822265625;
+	setAttr ".tgi[0].ni[172].y" 1925.7142333984375;
 	setAttr ".tgi[0].ni[172].nvs" 18304;
 	setAttr ".tgi[0].ni[173].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[173].y" -7765.71435546875;
+	setAttr ".tgi[0].ni[173].y" -1708.5714111328125;
 	setAttr ".tgi[0].ni[173].nvs" 18304;
-	setAttr ".tgi[0].ni[174].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[174].y" -2834.28564453125;
+	setAttr ".tgi[0].ni[174].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[174].y" -3980;
 	setAttr ".tgi[0].ni[174].nvs" 18304;
-	setAttr ".tgi[0].ni[175].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[175].y" -1102.857177734375;
+	setAttr ".tgi[0].ni[175].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[175].y" 3571.428466796875;
 	setAttr ".tgi[0].ni[175].nvs" 18304;
-	setAttr ".tgi[0].ni[176].x" -738.5714111328125;
-	setAttr ".tgi[0].ni[176].y" 3647.142822265625;
+	setAttr ".tgi[0].ni[176].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[176].y" 708.5714111328125;
 	setAttr ".tgi[0].ni[176].nvs" 18304;
-	setAttr ".tgi[0].ni[177].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[177].y" -800;
+	setAttr ".tgi[0].ni[177].x" 490;
+	setAttr ".tgi[0].ni[177].y" 1180;
 	setAttr ".tgi[0].ni[177].nvs" 18304;
-	setAttr ".tgi[0].ni[178].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[178].y" 4097.14306640625;
+	setAttr ".tgi[0].ni[178].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[178].y" 1314.2857666015625;
 	setAttr ".tgi[0].ni[178].nvs" 18304;
-	setAttr ".tgi[0].ni[179].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[179].y" -497.14285278320313;
+	setAttr ".tgi[0].ni[179].x" -2294.28564453125;
+	setAttr ".tgi[0].ni[179].y" 4287.14306640625;
 	setAttr ".tgi[0].ni[179].nvs" 18304;
-	setAttr ".tgi[0].ni[180].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[180].y" 3605.71435546875;
+	setAttr ".tgi[0].ni[180].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[180].y" -3071.428466796875;
 	setAttr ".tgi[0].ni[180].nvs" 18304;
 	setAttr ".tgi[0].ni[181].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[181].y" -2465.71435546875;
+	setAttr ".tgi[0].ni[181].y" -8371.4287109375;
 	setAttr ".tgi[0].ni[181].nvs" 18304;
-	setAttr ".tgi[0].ni[182].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[182].y" 1785.7142333984375;
+	setAttr ".tgi[0].ni[182].x" -1045.7142333984375;
+	setAttr ".tgi[0].ni[182].y" 3897.142822265625;
 	setAttr ".tgi[0].ni[182].nvs" 18304;
-	setAttr ".tgi[0].ni[183].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[183].y" -1062.857177734375;
-	setAttr ".tgi[0].ni[183].nvs" 1920;
-	setAttr ".tgi[0].ni[184].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[184].y" 1770;
+	setAttr ".tgi[0].ni[183].x" 2447.142822265625;
+	setAttr ".tgi[0].ni[183].y" 411.42855834960938;
+	setAttr ".tgi[0].ni[183].nvs" 18304;
+	setAttr ".tgi[0].ni[184].x" -91.428573608398438;
+	setAttr ".tgi[0].ni[184].y" 381.42855834960938;
 	setAttr ".tgi[0].ni[184].nvs" 18304;
 	setAttr ".tgi[0].ni[185].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[185].y" 4342.85693359375;
+	setAttr ".tgi[0].ni[185].y" 3974.28564453125;
 	setAttr ".tgi[0].ni[185].nvs" 18304;
-	setAttr ".tgi[0].ni[186].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[186].y" 862.85711669921875;
+	setAttr ".tgi[0].ni[186].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[186].y" -351.42855834960938;
 	setAttr ".tgi[0].ni[186].nvs" 18304;
-	setAttr ".tgi[0].ni[187].x" 2445.71435546875;
-	setAttr ".tgi[0].ni[187].y" 714.28570556640625;
+	setAttr ".tgi[0].ni[187].x" 2447.142822265625;
+	setAttr ".tgi[0].ni[187].y" 108.57142639160156;
 	setAttr ".tgi[0].ni[187].nvs" 18304;
-	setAttr ".tgi[0].ni[188].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[188].y" -1860;
+	setAttr ".tgi[0].ni[188].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[188].y" -692.85711669921875;
 	setAttr ".tgi[0].ni[188].nvs" 18304;
-	setAttr ".tgi[0].ni[189].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[189].y" -1708.5714111328125;
+	setAttr ".tgi[0].ni[189].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[189].y" 2991.428466796875;
 	setAttr ".tgi[0].ni[189].nvs" 18304;
-	setAttr ".tgi[0].ni[190].x" 2440;
-	setAttr ".tgi[0].ni[190].y" 1471.4285888671875;
+	setAttr ".tgi[0].ni[190].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[190].y" 1785.7142333984375;
 	setAttr ".tgi[0].ni[190].nvs" 18304;
-	setAttr ".tgi[0].ni[191].x" -91.428573608398438;
-	setAttr ".tgi[0].ni[191].y" 381.42855834960938;
+	setAttr ".tgi[0].ni[191].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[191].y" -3374.28564453125;
 	setAttr ".tgi[0].ni[191].nvs" 18304;
-	setAttr ".tgi[0].ni[192].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[192].y" 3694.28564453125;
+	setAttr ".tgi[0].ni[192].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[192].y" -8068.5712890625;
 	setAttr ".tgi[0].ni[192].nvs" 18304;
-	setAttr ".tgi[0].ni[193].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[193].y" -3525.71435546875;
+	setAttr ".tgi[0].ni[193].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[193].y" -3861.428466796875;
 	setAttr ".tgi[0].ni[193].nvs" 18304;
-	setAttr ".tgi[0].ni[194].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[194].y" 1434.2857666015625;
+	setAttr ".tgi[0].ni[194].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[194].y" -1362.857177734375;
 	setAttr ".tgi[0].ni[194].nvs" 18304;
-	setAttr ".tgi[0].ni[195].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[195].y" -1464.2857666015625;
+	setAttr ".tgi[0].ni[195].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[195].y" 4588.5712890625;
 	setAttr ".tgi[0].ni[195].nvs" 18304;
-	setAttr ".tgi[0].ni[196].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[196].y" 4834.28564453125;
+	setAttr ".tgi[0].ni[196].x" 1728.5714111328125;
+	setAttr ".tgi[0].ni[196].y" 8331.4287109375;
 	setAttr ".tgi[0].ni[196].nvs" 18304;
-	setAttr ".tgi[0].ni[197].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[197].y" 1011.4285888671875;
+	setAttr ".tgi[0].ni[197].x" 2422.857177734375;
+	setAttr ".tgi[0].ni[197].y" 2985.71435546875;
 	setAttr ".tgi[0].ni[197].nvs" 18304;
-	setAttr ".tgi[0].ni[198].x" -1045.7142333984375;
-	setAttr ".tgi[0].ni[198].y" 2905.71435546875;
+	setAttr ".tgi[0].ni[198].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[198].y" -1980;
 	setAttr ".tgi[0].ni[198].nvs" 18304;
-	setAttr ".tgi[0].ni[199].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[199].y" 1678.5714111328125;
+	setAttr ".tgi[0].ni[199].x" 2051.428466796875;
+	setAttr ".tgi[0].ni[199].y" 8410;
 	setAttr ".tgi[0].ni[199].nvs" 18304;
 	setAttr ".tgi[0].ni[200].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[200].y" 3202.857177734375;
+	setAttr ".tgi[0].ni[200].y" 2508.571533203125;
 	setAttr ".tgi[0].ni[200].nvs" 18304;
-	setAttr ".tgi[0].ni[201].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[201].y" -1261.4285888671875;
+	setAttr ".tgi[0].ni[201].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[201].y" -6402.85693359375;
 	setAttr ".tgi[0].ni[201].nvs" 18304;
-	setAttr ".tgi[0].ni[202].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[202].y" 2860;
+	setAttr ".tgi[0].ni[202].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[202].y" -345.71429443359375;
 	setAttr ".tgi[0].ni[202].nvs" 18304;
-	setAttr ".tgi[0].ni[203].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[203].y" 1555.7142333984375;
+	setAttr ".tgi[0].ni[203].x" -431.42855834960938;
+	setAttr ".tgi[0].ni[203].y" 2148.571533203125;
 	setAttr ".tgi[0].ni[203].nvs" 18304;
-	setAttr ".tgi[0].ni[204].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[204].y" 3974.28564453125;
+	setAttr ".tgi[0].ni[204].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[204].y" -4251.4287109375;
 	setAttr ".tgi[0].ni[204].nvs" 18304;
-	setAttr ".tgi[0].ni[205].x" -738.5714111328125;
-	setAttr ".tgi[0].ni[205].y" 2654.28564453125;
+	setAttr ".tgi[0].ni[205].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[205].y" -6554.28564453125;
 	setAttr ".tgi[0].ni[205].nvs" 18304;
-	setAttr ".tgi[0].ni[206].x" 2450;
-	setAttr ".tgi[0].ni[206].y" -194.28572082519531;
+	setAttr ".tgi[0].ni[206].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[206].y" 3080;
 	setAttr ".tgi[0].ni[206].nvs" 18304;
-	setAttr ".tgi[0].ni[207].x" -431.42855834960938;
-	setAttr ".tgi[0].ni[207].y" 2922.857177734375;
+	setAttr ".tgi[0].ni[207].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[207].y" -2431.428466796875;
 	setAttr ".tgi[0].ni[207].nvs" 18304;
-	setAttr ".tgi[0].ni[208].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[208].y" 3728.571533203125;
+	setAttr ".tgi[0].ni[208].x" -431.42855834960938;
+	setAttr ".tgi[0].ni[208].y" 1608.5714111328125;
 	setAttr ".tgi[0].ni[208].nvs" 18304;
-	setAttr ".tgi[0].ni[209].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[209].y" -2438.571533203125;
+	setAttr ".tgi[0].ni[209].x" 2422.857177734375;
+	setAttr ".tgi[0].ni[209].y" -2691.428466796875;
 	setAttr ".tgi[0].ni[209].nvs" 18304;
-	setAttr ".tgi[0].ni[210].x" -2294.28564453125;
-	setAttr ".tgi[0].ni[210].y" 4604.28564453125;
+	setAttr ".tgi[0].ni[210].x" 2431.428466796875;
+	setAttr ".tgi[0].ni[210].y" 2380;
 	setAttr ".tgi[0].ni[210].nvs" 18304;
 	setAttr ".tgi[0].ni[211].x" -1987.142822265625;
-	setAttr ".tgi[0].ni[211].y" 4535.71435546875;
+	setAttr ".tgi[0].ni[211].y" 4412.85693359375;
 	setAttr ".tgi[0].ni[211].nvs" 18304;
-	setAttr ".tgi[0].ni[212].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[212].y" -5342.85693359375;
-	setAttr ".tgi[0].ni[212].nvs" 18304;
-	setAttr ".tgi[0].ni[213].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[213].y" 831.4285888671875;
+	setAttr ".tgi[0].ni[212].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[212].y" -2732.857177734375;
+	setAttr ".tgi[0].ni[212].nvs" 1920;
+	setAttr ".tgi[0].ni[213].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[213].y" -1358.5714111328125;
 	setAttr ".tgi[0].ni[213].nvs" 18304;
-	setAttr ".tgi[0].ni[214].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[214].y" -7462.85693359375;
+	setAttr ".tgi[0].ni[214].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[214].y" 2834.28564453125;
 	setAttr ".tgi[0].ni[214].nvs" 18304;
-	setAttr ".tgi[0].ni[215].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[215].y" -4381.4287109375;
+	setAttr ".tgi[0].ni[215].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[215].y" -9280;
 	setAttr ".tgi[0].ni[215].nvs" 18304;
-	setAttr ".tgi[0].ni[216].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[216].y" -5797.14306640625;
+	setAttr ".tgi[0].ni[216].x" 2427.142822265625;
+	setAttr ".tgi[0].ni[216].y" 2767.142822265625;
 	setAttr ".tgi[0].ni[216].nvs" 18304;
-	setAttr ".tgi[0].ni[217].x" 2412.857177734375;
-	setAttr ".tgi[0].ni[217].y" 8655.7138671875;
+	setAttr ".tgi[0].ni[217].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[217].y" -7765.71435546875;
 	setAttr ".tgi[0].ni[217].nvs" 18304;
-	setAttr ".tgi[0].ni[218].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[218].y" -4888.5712890625;
+	setAttr ".tgi[0].ni[218].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[218].y" 574.28570556640625;
 	setAttr ".tgi[0].ni[218].nvs" 18304;
-	setAttr ".tgi[0].ni[219].x" -1045.7142333984375;
-	setAttr ".tgi[0].ni[219].y" 3028.571533203125;
+	setAttr ".tgi[0].ni[219].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[219].y" -3222.857177734375;
 	setAttr ".tgi[0].ni[219].nvs" 18304;
-	setAttr ".tgi[0].ni[220].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[220].y" -3471.428466796875;
+	setAttr ".tgi[0].ni[220].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[220].y" -1481.4285888671875;
 	setAttr ".tgi[0].ni[220].nvs" 18304;
-	setAttr ".tgi[0].ni[221].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[221].y" -8674.2861328125;
+	setAttr ".tgi[0].ni[221].x" 2424.28564453125;
+	setAttr ".tgi[0].ni[221].y" -3471.428466796875;
 	setAttr ".tgi[0].ni[221].nvs" 18304;
-	setAttr ".tgi[0].ni[222].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[222].y" 2292.857177734375;
+	setAttr ".tgi[0].ni[222].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[222].y" -5797.14306640625;
 	setAttr ".tgi[0].ni[222].nvs" 18304;
-	setAttr ".tgi[0].ni[223].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[223].y" -3211.428466796875;
+	setAttr ".tgi[0].ni[223].x" -1045.7142333984375;
+	setAttr ".tgi[0].ni[223].y" 3028.571533203125;
 	setAttr ".tgi[0].ni[223].nvs" 18304;
-	setAttr ".tgi[0].ni[224].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[224].y" 2518.571533203125;
+	setAttr ".tgi[0].ni[224].x" -431.42855834960938;
+	setAttr ".tgi[0].ni[224].y" 1788.5714111328125;
 	setAttr ".tgi[0].ni[224].nvs" 18304;
-	setAttr ".tgi[0].ni[225].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[225].y" 1997.142822265625;
+	setAttr ".tgi[0].ni[225].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[225].y" -7311.4287109375;
 	setAttr ".tgi[0].ni[225].nvs" 18304;
-	setAttr ".tgi[0].ni[226].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[226].y" 3940;
+	setAttr ".tgi[0].ni[226].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[226].y" 1165.7142333984375;
 	setAttr ".tgi[0].ni[226].nvs" 18304;
-	setAttr ".tgi[0].ni[227].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[227].y" -6857.14306640625;
+	setAttr ".tgi[0].ni[227].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[227].y" -2438.571533203125;
 	setAttr ".tgi[0].ni[227].nvs" 18304;
 	setAttr ".tgi[0].ni[228].x" 2117.142822265625;
-	setAttr ".tgi[0].ni[228].y" -2431.428466796875;
+	setAttr ".tgi[0].ni[228].y" -2301.428466796875;
 	setAttr ".tgi[0].ni[228].nvs" 18304;
-	setAttr ".tgi[0].ni[229].x" -431.42855834960938;
-	setAttr ".tgi[0].ni[229].y" 2148.571533203125;
+	setAttr ".tgi[0].ni[229].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[229].y" 985.71429443359375;
 	setAttr ".tgi[0].ni[229].nvs" 18304;
-	setAttr ".tgi[0].ni[230].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[230].y" -692.85711669921875;
+	setAttr ".tgi[0].ni[230].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[230].y" -6857.14306640625;
 	setAttr ".tgi[0].ni[230].nvs" 18304;
-	setAttr ".tgi[0].ni[231].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[231].y" 2680;
+	setAttr ".tgi[0].ni[231].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[231].y" 2591.428466796875;
 	setAttr ".tgi[0].ni[231].nvs" 18304;
-	setAttr ".tgi[0].ni[232].x" 797.14288330078125;
-	setAttr ".tgi[0].ni[232].y" 2425.71435546875;
+	setAttr ".tgi[0].ni[232].x" 182.85714721679688;
+	setAttr ".tgi[0].ni[232].y" 384.28570556640625;
 	setAttr ".tgi[0].ni[232].nvs" 18304;
-	setAttr ".tgi[0].ni[233].x" 2445.71435546875;
-	setAttr ".tgi[0].ni[233].y" 562.85711669921875;
+	setAttr ".tgi[0].ni[233].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[233].y" -2684.28564453125;
 	setAttr ".tgi[0].ni[233].nvs" 18304;
-	setAttr ".tgi[0].ni[234].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[234].y" -6402.85693359375;
+	setAttr ".tgi[0].ni[234].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[234].y" -2834.28564453125;
 	setAttr ".tgi[0].ni[234].nvs" 18304;
-	setAttr ".tgi[0].ni[235].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[235].y" -1850;
+	setAttr ".tgi[0].ni[235].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[235].y" -5645.71435546875;
 	setAttr ".tgi[0].ni[235].nvs" 18304;
 	setAttr ".tgi[0].ni[236].x" 2427.142822265625;
-	setAttr ".tgi[0].ni[236].y" 2868.571533203125;
+	setAttr ".tgi[0].ni[236].y" 4711.4287109375;
 	setAttr ".tgi[0].ni[236].nvs" 18304;
-	setAttr ".tgi[0].ni[237].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[237].y" 3325.71435546875;
+	setAttr ".tgi[0].ni[237].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[237].y" -8674.2861328125;
 	setAttr ".tgi[0].ni[237].nvs" 18304;
-	setAttr ".tgi[0].ni[238].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[238].y" -2684.28564453125;
+	setAttr ".tgi[0].ni[238].x" 2445.71435546875;
+	setAttr ".tgi[0].ni[238].y" 714.28570556640625;
 	setAttr ".tgi[0].ni[238].nvs" 18304;
-	setAttr ".tgi[0].ni[239].x" -431.42855834960938;
-	setAttr ".tgi[0].ni[239].y" 2025.7142333984375;
+	setAttr ".tgi[0].ni[239].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[239].y" -1850;
 	setAttr ".tgi[0].ni[239].nvs" 18304;
-	setAttr ".tgi[0].ni[240].x" 2444.28564453125;
-	setAttr ".tgi[0].ni[240].y" 1168.5714111328125;
+	setAttr ".tgi[0].ni[240].x" 2445.71435546875;
+	setAttr ".tgi[0].ni[240].y" 562.85711669921875;
 	setAttr ".tgi[0].ni[240].nvs" 18304;
-	setAttr ".tgi[0].ni[241].x" 2425.71435546875;
-	setAttr ".tgi[0].ni[241].y" 2682.857177734375;
+	setAttr ".tgi[0].ni[241].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[241].y" 2957.142822265625;
 	setAttr ".tgi[0].ni[241].nvs" 18304;
-	setAttr ".tgi[0].ni[242].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[242].y" -8220;
+	setAttr ".tgi[0].ni[242].x" -431.42855834960938;
+	setAttr ".tgi[0].ni[242].y" 2800;
 	setAttr ".tgi[0].ni[242].nvs" 18304;
-	setAttr ".tgi[0].ni[243].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[243].y" 780;
+	setAttr ".tgi[0].ni[243].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[243].y" -2617.142822265625;
 	setAttr ".tgi[0].ni[243].nvs" 18304;
-	setAttr ".tgi[0].ni[244].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[244].y" -6251.4287109375;
+	setAttr ".tgi[0].ni[244].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[244].y" -228.57142639160156;
 	setAttr ".tgi[0].ni[244].nvs" 18304;
-	setAttr ".tgi[0].ni[245].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[245].y" 3080;
+	setAttr ".tgi[0].ni[245].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[245].y" -4585.71435546875;
 	setAttr ".tgi[0].ni[245].nvs" 18304;
-	setAttr ".tgi[0].ni[246].x" 1758.5714111328125;
-	setAttr ".tgi[0].ni[246].y" -570;
+	setAttr ".tgi[0].ni[246].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[246].y" -4888.5712890625;
 	setAttr ".tgi[0].ni[246].nvs" 18304;
-	setAttr ".tgi[0].ni[247].x" 182.85714721679688;
-	setAttr ".tgi[0].ni[247].y" 574.28570556640625;
+	setAttr ".tgi[0].ni[247].x" -738.5714111328125;
+	setAttr ".tgi[0].ni[247].y" 2237.142822265625;
 	setAttr ".tgi[0].ni[247].nvs" 18304;
-	setAttr ".tgi[0].ni[248].x" -124.28571319580078;
-	setAttr ".tgi[0].ni[248].y" 2058.571533203125;
+	setAttr ".tgi[0].ni[248].x" 2430;
+	setAttr ".tgi[0].ni[248].y" 2531.428466796875;
 	setAttr ".tgi[0].ni[248].nvs" 18304;
-	setAttr ".tgi[0].ni[249].x" 2451.428466796875;
-	setAttr ".tgi[0].ni[249].y" -6705.71435546875;
+	setAttr ".tgi[0].ni[249].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[249].y" 1437.142822265625;
 	setAttr ".tgi[0].ni[249].nvs" 18304;
-	setAttr ".tgi[0].ni[250].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[250].y" -1358.5714111328125;
+	setAttr ".tgi[0].ni[250].x" -124.28571319580078;
+	setAttr ".tgi[0].ni[250].y" 1134.2857666015625;
 	setAttr ".tgi[0].ni[250].nvs" 18304;
-	setAttr ".tgi[0].ni[251].x" 2447.142822265625;
-	setAttr ".tgi[0].ni[251].y" 411.42855834960938;
+	setAttr ".tgi[0].ni[251].x" -1045.7142333984375;
+	setAttr ".tgi[0].ni[251].y" 2905.71435546875;
 	setAttr ".tgi[0].ni[251].nvs" 18304;
-	setAttr ".tgi[0].ni[252].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[252].y" -3341.428466796875;
+	setAttr ".tgi[0].ni[252].x" -1660;
+	setAttr ".tgi[0].ni[252].y" 3872.857177734375;
 	setAttr ".tgi[0].ni[252].nvs" 18304;
-	setAttr ".tgi[0].ni[253].x" 2424.28564453125;
-	setAttr ".tgi[0].ni[253].y" -4251.4287109375;
+	setAttr ".tgi[0].ni[253].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[253].y" -8977.142578125;
 	setAttr ".tgi[0].ni[253].nvs" 18304;
-	setAttr ".tgi[0].ni[254].x" -1660;
-	setAttr ".tgi[0].ni[254].y" 3872.857177734375;
+	setAttr ".tgi[0].ni[254].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[254].y" -9128.5712890625;
 	setAttr ".tgi[0].ni[254].nvs" 18304;
-	setAttr ".tgi[0].ni[255].x" 2065.71435546875;
-	setAttr ".tgi[0].ni[255].y" 237.14285278320313;
+	setAttr ".tgi[0].ni[255].x" 1758.5714111328125;
+	setAttr ".tgi[0].ni[255].y" 862.85711669921875;
 	setAttr ".tgi[0].ni[255].nvs" 18304;
-	setAttr ".tgi[0].ni[256].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[256].y" -2732.857177734375;
-	setAttr ".tgi[0].ni[256].nvs" 1920;
-	setAttr ".tgi[0].ni[257].x" 1411.4285888671875;
-	setAttr ".tgi[0].ni[257].y" 2951.428466796875;
+	setAttr ".tgi[0].ni[256].x" 2451.428466796875;
+	setAttr ".tgi[0].ni[256].y" -6251.4287109375;
+	setAttr ".tgi[0].ni[256].nvs" 18304;
+	setAttr ".tgi[0].ni[257].x" 2065.71435546875;
+	setAttr ".tgi[0].ni[257].y" -2070;
 	setAttr ".tgi[0].ni[257].nvs" 18304;
+	setAttr ".tgi[0].ni[258].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[258].y" -3830;
+	setAttr ".tgi[0].ni[258].nvs" 18304;
+	setAttr ".tgi[0].ni[259].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[259].y" -3931.428466796875;
+	setAttr ".tgi[0].ni[259].nvs" 18304;
+	setAttr ".tgi[0].ni[260].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[260].y" -4032.857177734375;
+	setAttr ".tgi[0].ni[260].nvs" 18304;
+	setAttr ".tgi[0].ni[261].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[261].y" -4134.28564453125;
+	setAttr ".tgi[0].ni[261].nvs" 1920;
+	setAttr ".tgi[0].ni[262].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[262].y" -4235.71435546875;
+	setAttr ".tgi[0].ni[262].nvs" 1920;
+	setAttr ".tgi[0].ni[263].x" 1411.4285888671875;
+	setAttr ".tgi[0].ni[263].y" -4337.14306640625;
+	setAttr ".tgi[0].ni[263].nvs" 1920;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
@@ -2097,97 +2271,96 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".bswa";
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
-connectAttr "golem_rigRN.phl[1]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[223].dn"
+connectAttr "golem_rigRN.phl[1]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[14].dn";
+connectAttr "golem_rigRN.phl[2]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[228].dn"
 		;
-connectAttr "golem_rigRN.phl[2]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[50].dn"
+connectAttr "golem_rigRN.phl[3]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[75].dn"
 		;
-connectAttr "golem_rigRN.phl[3]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[153].dn"
+connectAttr "golem_rigRN.phl[4]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[43].dn"
 		;
-connectAttr "golem_rigRN.phl[4]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[142].dn"
+connectAttr "golem_rigRN.phl[5]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[134].dn"
 		;
-connectAttr "golem_rigRN.phl[5]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[115].dn"
+connectAttr "golem_rigRN.phl[6]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[90].dn"
 		;
-connectAttr "golem_rigRN.phl[6]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[215].dn"
+connectAttr "golem_rigRN.phl[7]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[204].dn"
 		;
-connectAttr "golem_rigRN.phl[7]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[253].dn"
+connectAttr "golem_rigRN.phl[8]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[109].dn"
 		;
-connectAttr "golem_rigRN.phl[8]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[113].dn"
+connectAttr "golem_rigRN.phl[9]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[145].dn"
 		;
-connectAttr "golem_rigRN.phl[9]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[96].dn"
+connectAttr "golem_rigRN.phl[10]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[95].dn"
 		;
-connectAttr "golem_rigRN.phl[10]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[81].dn"
+connectAttr "golem_rigRN.phl[11]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[193].dn"
 		;
-connectAttr "golem_rigRN.phl[11]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[78].dn"
+connectAttr "golem_rigRN.phl[12]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[166].dn"
 		;
-connectAttr "golem_rigRN.phl[12]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[65].dn"
+connectAttr "golem_rigRN.phl[13]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[74].dn"
 		;
-connectAttr "golem_rigRN.phl[13]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[1].dn"
+connectAttr "golem_rigRN.phl[14]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[41].dn"
 		;
-connectAttr "golem_rigRN.phl[14]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[114].dn"
+connectAttr "golem_rigRN.phl[15]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[216].dn"
 		;
-connectAttr "golem_rigRN.phl[15]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[167].dn"
+connectAttr "golem_rigRN.phl[16]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[200].dn"
 		;
-connectAttr "golem_rigRN.phl[16]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[93].dn"
+connectAttr "golem_rigRN.phl[17]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[170].dn"
 		;
-connectAttr "golem_rigRN.phl[17]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[236].dn"
+connectAttr "golem_rigRN.phl[18]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[21].dn"
 		;
-connectAttr "golem_rigRN.phl[18]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[143].dn"
+connectAttr "golem_rigRN.phl[19]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[127].dn"
 		;
-connectAttr "golem_rigRN.phl[19]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[252].dn"
+connectAttr "golem_rigRN.phl[20]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[221].dn"
 		;
-connectAttr "golem_rigRN.phl[20]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[220].dn"
+connectAttr "golem_rigRN.phl[21]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[86].dn"
 		;
-connectAttr "golem_rigRN.phl[21]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[136].dn"
+connectAttr "golem_rigRN.phl[22]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[64].dn"
 		;
-connectAttr "golem_rigRN.phl[22]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[10].dn"
+connectAttr "golem_rigRN.phl[23]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[52].dn"
 		;
-connectAttr "golem_rigRN.phl[23]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[228].dn"
+connectAttr "golem_rigRN.phl[24]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[207].dn"
 		;
-connectAttr "golem_rigRN.phl[24]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[7].dn"
+connectAttr "golem_rigRN.phl[25]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[209].dn"
 		;
-connectAttr "golem_rigRN.phl[25]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[43].dn"
+connectAttr "golem_rigRN.phl[26]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[2].dn"
 		;
-connectAttr "golem_rigRN.phl[26]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[44].dn"
+connectAttr "golem_rigRN.phl[27]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[24].dn"
 		;
-connectAttr "golem_rigRN.phl[27]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[152].dn"
+connectAttr "golem_rigRN.phl[28]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[119].dn"
 		;
-connectAttr "golem_rigRN.phl[28]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[224].dn"
+connectAttr "golem_rigRN.phl[29]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[185].dn"
 		;
-connectAttr "golem_rigRN.phl[29]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[204].dn"
+connectAttr "golem_rigRN.phl[30]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[219].dn"
 		;
-connectAttr "golem_rigRN.phl[30]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[61].dn"
+connectAttr "golem_rigRN.phl[31]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[140].dn"
 		;
-connectAttr "golem_rigRN.phl[31]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[128].dn"
+connectAttr "golem_rigRN.phl[32]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[235].dn"
 		;
-connectAttr "golem_rigRN.phl[32]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[28].dn"
+connectAttr "golem_rigRN.phl[33]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[112].dn"
 		;
-connectAttr "golem_rigRN.phl[33]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[145].dn"
+connectAttr "golem_rigRN.phl[34]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[1].dn"
 		;
-connectAttr "golem_rigRN.phl[34]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[33].dn"
+connectAttr "golem_rigRN.phl[35]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[98].dn"
 		;
-connectAttr "golem_rigRN.phl[35]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[210].dn"
+connectAttr "golem_rigRN.phl[36]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[91].dn"
 		;
-connectAttr "golem_rigRN.phl[36]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[34].dn"
+connectAttr "golem_rigRN.phl[37]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[246].dn"
 		;
-connectAttr "golem_rigRN.phl[37]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[218].dn"
+connectAttr "golem_rigRN.phl[38]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[174].dn"
 		;
-connectAttr "golem_rigRN.phl[38]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[130].dn"
+connectAttr "golem_rigRN.phl[39]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[71].dn"
 		;
-connectAttr "golem_rigRN.phl[39]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[178].dn"
+connectAttr "golem_rigRN.phl[40]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[226].dn"
 		;
-connectAttr "golem_rigRN.phl[40]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[82].dn"
+connectAttr "golem_rigRN.phl[41]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[116].dn"
 		;
-connectAttr "golem_rigRN.phl[41]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[36].dn"
+connectAttr "golem_rigRN.phl[42]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[146].dn"
 		;
-connectAttr "golem_rigRN.phl[42]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[46].dn"
+connectAttr "golem_rigRN.phl[43]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[157].dn"
 		;
-connectAttr "golem_rigRN.phl[43]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[55].dn"
+connectAttr "golem_rigRN.phl[44]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[114].dn"
 		;
-connectAttr "golem_rigRN.phl[44]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[17].dn"
+connectAttr "golem_rigRN.phl[45]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[5].dn"
 		;
-connectAttr "golem_rigRN.phl[45]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[124].dn"
-		;
-connectAttr "golem_rigRN.phl[46]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[151].dn"
+connectAttr "golem_rigRN.phl[46]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[245].dn"
 		;
 connectAttr "golem_arm_ctrlFK_L_translateX.o" "golem_rigRN.phl[47]";
 connectAttr "golem_arm_ctrlFK_L_translateY.o" "golem_rigRN.phl[48]";
@@ -2195,408 +2368,414 @@ connectAttr "golem_arm_ctrlFK_L_translateZ.o" "golem_rigRN.phl[49]";
 connectAttr "golem_arm_ctrlFK_L_rotateX.o" "golem_rigRN.phl[50]";
 connectAttr "golem_arm_ctrlFK_L_rotateY.o" "golem_rigRN.phl[51]";
 connectAttr "golem_arm_ctrlFK_L_rotateZ.o" "golem_rigRN.phl[52]";
-connectAttr "golem_rigRN.phl[53]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[183].dn"
+connectAttr "golem_rigRN.phl[53]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[39].dn"
 		;
-connectAttr "golem_rigRN.phl[54]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[212].dn"
+connectAttr "golem_rigRN.phl[54]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[132].dn"
 		;
-connectAttr "golem_rigRN.phl[55]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[35].dn"
+connectAttr "golem_rigRN.phl[55]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[59].dn"
 		;
-connectAttr "golem_rigRN.phl[56]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[67].dn"
+connectAttr "golem_rigRN.phl[56]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[80].dn"
 		;
-connectAttr "golem_rigRN.phl[57]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[230].dn"
+connectAttr "golem_rigRN.phl[57]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[188].dn"
 		;
-connectAttr "golem_rigRN.phl[58]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[251].dn"
+connectAttr "golem_rigRN.phl[58]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[183].dn"
 		;
-connectAttr "golem_rigRN.phl[59]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[144].dn"
+connectAttr "golem_rigRN.phl[59]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[103].dn"
 		;
-connectAttr "golem_rigRN.phl[60]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[170].dn"
+connectAttr "golem_rigRN.phl[60]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[47].dn"
 		;
-connectAttr "golem_rigRN.phl[61]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[71].dn"
+connectAttr "golem_rigRN.phl[61]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[56].dn"
 		;
 connectAttr "golem_handB_ctrl_L_translateX.o" "golem_rigRN.phl[62]";
 connectAttr "golem_handB_ctrl_L_rotateY.o" "golem_rigRN.phl[63]";
 connectAttr "golem_handB_ctrl_L_rotateZ.o" "golem_rigRN.phl[64]";
-connectAttr "golem_rigRN.phl[65]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[246].dn"
+connectAttr "golem_rigRN.phl[65]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[49].dn"
 		;
-connectAttr "golem_rigRN.phl[66]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[193].dn"
+connectAttr "golem_rigRN.phl[66]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[40].dn"
 		;
-connectAttr "golem_rigRN.phl[67]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[117].dn"
+connectAttr "golem_rigRN.phl[67]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[100].dn"
 		;
-connectAttr "golem_rigRN.phl[68]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[94].dn"
+connectAttr "golem_rigRN.phl[68]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[191].dn"
 		;
-connectAttr "golem_rigRN.phl[69]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[105].dn"
+connectAttr "golem_arm_ctrlFK_R_translateX.o" "golem_rigRN.phl[69]";
+connectAttr "golem_arm_ctrlFK_R_translateY.o" "golem_rigRN.phl[70]";
+connectAttr "golem_arm_ctrlFK_R_translateZ.o" "golem_rigRN.phl[71]";
+connectAttr "golem_arm_ctrlFK_R_rotateX.o" "golem_rigRN.phl[72]";
+connectAttr "golem_arm_ctrlFK_R_rotateY.o" "golem_rigRN.phl[73]";
+connectAttr "golem_arm_ctrlFK_R_rotateZ.o" "golem_rigRN.phl[74]";
+connectAttr "golem_rigRN.phl[75]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[106].dn"
 		;
-connectAttr "golem_rigRN.phl[70]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[51].dn"
+connectAttr "golem_rigRN.phl[76]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[180].dn"
 		;
-connectAttr "golem_rigRN.phl[71]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[140].dn"
+connectAttr "golem_rigRN.phl[77]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[243].dn"
 		;
-connectAttr "golem_rigRN.phl[72]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[208].dn"
+connectAttr "golem_rigRN.phl[78]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[110].dn"
 		;
-connectAttr "golem_rigRN.phl[73]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[87].dn"
+connectAttr "golem_rigRN.phl[79]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[53].dn"
 		;
-connectAttr "golem_rigRN.phl[74]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[240].dn"
+connectAttr "golem_rigRN.phl[80]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[151].dn"
 		;
-connectAttr "golem_rigRN.phl[75]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[19].dn"
+connectAttr "golem_rigRN.phl[81]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[76].dn"
 		;
-connectAttr "golem_rigRN.phl[76]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[181].dn"
+connectAttr "golem_rigRN.phl[82]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[12].dn"
 		;
-connectAttr "golem_rigRN.phl[77]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[180].dn"
+connectAttr "golem_rigRN.phl[83]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[115].dn"
 		;
-connectAttr "golem_rigRN.phl[78]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[42].dn"
+connectAttr "golem_rigRN.phl[84]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[198].dn"
 		;
-connectAttr "golem_rigRN.phl[79]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[100].dn"
+connectAttr "golem_rigRN.phl[85]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[135].dn"
 		;
-connectAttr "golem_rigRN.phl[80]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[74].dn"
+connectAttr "golem_rigRN.phl[86]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[122].dn"
 		;
-connectAttr "golem_rigRN.phl[81]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[22].dn"
+connectAttr "golem_rigRN.phl[87]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[72].dn"
 		;
-connectAttr "golem_rigRN.phl[82]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[24].dn"
+connectAttr "golem_rigRN.phl[88]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[136].dn"
 		;
-connectAttr "golem_rigRN.phl[83]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[85].dn"
+connectAttr "golem_rigRN.phl[89]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[160].dn"
 		;
-connectAttr "golem_rigRN.phl[84]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[188].dn"
+connectAttr "golem_rigRN.phl[90]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[26].dn"
 		;
-connectAttr "golem_rigRN.phl[85]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[13].dn"
+connectAttr "golem_rigRN.phl[91]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[11].dn"
 		;
-connectAttr "golem_rigRN.phl[86]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[175].dn"
+connectAttr "golem_rigRN.phl[92]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[84].dn"
 		;
-connectAttr "golem_rigRN.phl[87]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[40].dn"
+connectAttr "golem_rigRN.phl[93]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[78].dn"
 		;
-connectAttr "golem_rigRN.phl[88]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[164].dn"
+connectAttr "golem_rigRN.phl[94]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[229].dn"
 		;
-connectAttr "golem_rigRN.phl[89]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[64].dn"
+connectAttr "golem_rigRN.phl[95]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[148].dn"
 		;
-connectAttr "golem_rigRN.phl[90]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[108].dn"
+connectAttr "golem_rigRN.phl[96]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[42].dn"
 		;
-connectAttr "golem_rigRN.phl[91]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[119].dn"
+connectAttr "golem_rigRN.phl[97]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[16].dn"
 		;
-connectAttr "golem_rigRN.phl[92]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[16].dn"
+connectAttr "golem_rigRN.phl[98]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[189].dn"
 		;
-connectAttr "golem_rigRN.phl[93]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[186].dn"
+connectAttr "golem_rigRN.phl[99]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[255].dn"
 		;
-connectAttr "golem_rigRN.phl[94]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[177].dn"
+connectAttr "golem_rigRN.phl[100]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[67].dn"
 		;
-connectAttr "golem_rigRN.phl[95]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[179].dn"
+connectAttr "golem_rigRN.phl[101]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[117].dn"
 		;
-connectAttr "golem_rigRN.phl[96]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[88].dn"
+connectAttr "golem_rigRN.phl[102]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[202].dn"
 		;
-connectAttr "golem_rigRN.phl[97]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[109].dn"
+connectAttr "golem_rigRN.phl[103]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[111].dn"
 		;
-connectAttr "golem_rigRN.phl[98]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[184].dn"
+connectAttr "golem_rigRN.phl[104]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[57].dn"
 		;
-connectAttr "golem_rigRN.phl[99]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[189].dn"
+connectAttr "golem_rigRN.phl[105]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[173].dn"
 		;
-connectAttr "golem_rigRN.phl[100]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[15].dn"
+connectAttr "golem_rigRN.phl[106]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[3].dn"
 		;
-connectAttr "golem_rigRN.phl[101]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[150].dn"
+connectAttr "golem_rigRN.phl[107]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[10].dn"
 		;
-connectAttr "golem_rigRN.phl[102]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[171].dn"
+connectAttr "golem_rigRN.phl[108]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[4].dn"
 		;
-connectAttr "golem_rigRN.phl[103]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[172].dn"
+connectAttr "golem_rigRN.phl[109]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[69].dn"
 		;
-connectAttr "golem_rigRN.phl[104]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[14].dn"
+connectAttr "golem_rigRN.phl[110]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[7].dn"
 		;
-connectAttr "golem_rigRN.phl[105]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[68].dn"
+connectAttr "golem_rigRN.phl[111]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[94].dn"
 		;
-connectAttr "golem_rigRN.phl[106]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[149].dn"
+connectAttr "golem_rigRN.phl[112]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[155].dn"
 		;
-connectAttr "golem_rigRN.phl[107]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[217].dn"
+connectAttr "golem_rigRN.phl[113]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[142].dn"
 		;
-connectAttr "golem_rigRN.phl[108]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[231].dn"
+connectAttr "golem_rigRN.phl[114]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[118].dn"
 		;
-connectAttr "golem_rigRN.phl[109]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[202].dn"
+connectAttr "golem_rigRN.phl[115]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[62].dn"
 		;
-connectAttr "golem_rigRN.phl[110]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[99].dn"
+connectAttr "golem_rigRN.phl[116]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[22].dn"
 		;
-connectAttr "golem_rigRN.phl[111]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[86].dn"
+connectAttr "golem_rigRN.phl[117]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[87].dn"
 		;
-connectAttr "golem_rigRN.phl[112]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[131].dn"
+connectAttr "golem_rigRN.phl[118]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[182].dn"
 		;
-connectAttr "golem_rigRN.phl[113]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[176].dn"
+connectAttr "golem_rigRN.phl[119]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[44].dn"
 		;
-connectAttr "golem_rigRN.phl[114]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[110].dn"
+connectAttr "golem_rigRN.phl[120]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[242].dn"
 		;
-connectAttr "golem_rigRN.phl[115]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[248].dn"
+connectAttr "golem_rigRN.phl[121]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[152].dn"
 		;
-connectAttr "golem_rigRN.phl[116]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[194].dn"
+connectAttr "golem_rigRN.phl[122]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[77].dn"
 		;
-connectAttr "golem_rigRN.phl[117]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[29].dn"
+connectAttr "golem_rigRN.phl[123]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[177].dn"
 		;
-connectAttr "golem_rigRN.phl[118]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[121].dn"
+connectAttr "golem_rigRN.phl[124]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[18].dn"
 		;
-connectAttr "golem_rigRN.phl[119]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[207].dn"
+connectAttr "golem_rigRN.phl[125]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[161].dn"
 		;
-connectAttr "golem_rigRN.phl[120]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[132].dn"
+connectAttr "golem_rigRN.phl[126]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[79].dn"
 		;
-connectAttr "golem_rigRN.phl[121]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[182].dn"
+connectAttr "golem_rigRN.phl[127]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[190].dn"
 		;
-connectAttr "golem_rigRN.phl[122]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[106].dn"
+connectAttr "golem_rigRN.phl[128]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[165].dn"
 		;
-connectAttr "golem_rigRN.phl[123]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[239].dn"
+connectAttr "golem_rigRN.phl[129]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[73].dn"
 		;
-connectAttr "golem_rigRN.phl[124]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[103].dn"
+connectAttr "golem_rigRN.phl[130]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[130].dn"
 		;
-connectAttr "golem_rigRN.phl[125]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[38].dn"
+connectAttr "golem_rigRN.phl[131]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[144].dn"
 		;
-connectAttr "golem_rigRN.phl[126]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[62].dn"
+connectAttr "golem_rigRN.phl[132]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[23].dn"
 		;
-connectAttr "golem_rigRN.phl[127]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[243].dn"
+connectAttr "golem_rigRN.phl[133]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[81].dn"
 		;
-connectAttr "golem_rigRN.phl[128]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[120].dn"
+connectAttr "golem_rigRN.phl[134]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[93].dn"
 		;
-connectAttr "golem_rigRN.phl[129]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[229].dn"
+connectAttr "golem_rigRN.phl[135]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[203].dn"
 		;
-connectAttr "golem_rigRN.phl[130]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[6].dn"
+connectAttr "golem_rigRN.phl[136]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[249].dn"
 		;
-connectAttr "golem_rigRN.phl[131]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[63].dn"
+connectAttr "golem_rigRN.phl[137]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[154].dn"
 		;
-connectAttr "golem_rigRN.phl[132]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[161].dn"
+connectAttr "golem_rigRN.phl[138]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[50].dn"
 		;
-connectAttr "golem_rigRN.phl[133]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[163].dn"
+connectAttr "golem_rigRN.phl[139]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[163].dn"
 		;
-connectAttr "golem_rigRN.phl[134]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[254].dn"
+connectAttr "golem_rigRN.phl[140]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[252].dn"
 		;
-connectAttr "golem_rigRN.phl[135]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[21].dn"
+connectAttr "golem_rigRN.phl[141]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[60].dn"
 		;
-connectAttr "golem_rigRN.phl[136]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[219].dn"
+connectAttr "golem_rigRN.phl[142]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[223].dn"
 		;
-connectAttr "golem_rigRN.phl[137]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[205].dn"
+connectAttr "golem_rigRN.phl[143]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[88].dn"
 		;
-connectAttr "golem_rigRN.phl[138]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[79].dn"
+connectAttr "golem_rigRN.phl[144]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[37].dn"
 		;
-connectAttr "golem_rigRN.phl[139]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[197].dn"
+connectAttr "golem_rigRN.phl[145]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[63].dn"
 		;
-connectAttr "golem_rigRN.phl[140]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[11].dn"
+connectAttr "golem_rigRN.phl[146]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[164].dn"
 		;
-connectAttr "golem_rigRN.phl[141]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[53].dn"
+connectAttr "golem_rigRN.phl[147]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[58].dn"
 		;
-connectAttr "golem_rigRN.phl[142]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[250].dn"
+connectAttr "golem_rigRN.phl[148]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[213].dn"
 		;
-connectAttr "golem_rigRN.phl[143]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[129].dn"
+connectAttr "golem_rigRN.phl[149]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[220].dn"
 		;
-connectAttr "golem_rigRN.phl[144]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[52].dn"
+connectAttr "golem_rigRN.phl[150]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[129].dn"
 		;
-connectAttr "golem_rigRN.phl[145]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[169].dn"
+connectAttr "golem_rigRN.phl[151]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[99].dn"
 		;
-connectAttr "golem_rigRN.phl[146]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[139].dn"
+connectAttr "golem_rigRN.phl[152]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[55].dn"
 		;
-connectAttr "golem_rigRN.phl[147]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[235].dn"
+connectAttr "golem_rigRN.phl[153]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[239].dn"
 		;
-connectAttr "golem_rigRN.phl[148]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[198].dn"
+connectAttr "golem_rigRN.phl[154]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[251].dn"
 		;
-connectAttr "golem_rigRN.phl[149]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[4].dn"
+connectAttr "golem_rigRN.phl[155]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[25].dn"
 		;
-connectAttr "golem_rigRN.phl[150]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[66].dn"
+connectAttr "golem_rigRN.phl[156]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[83].dn"
 		;
-connectAttr "golem_rigRN.phl[151]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[155].dn"
+connectAttr "golem_rigRN.phl[157]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[178].dn"
 		;
-connectAttr "golem_rigRN.phl[152]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[148].dn"
+connectAttr "golem_rigRN.phl[158]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[29].dn"
 		;
-connectAttr "golem_rigRN.phl[153]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[185].dn"
+connectAttr "golem_rigRN.phl[159]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[89].dn"
 		;
-connectAttr "golem_rigRN.phl[154]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[104].dn"
+connectAttr "golem_rigRN.phl[160]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[137].dn"
 		;
-connectAttr "golem_rigRN.phl[155]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[209].dn"
+connectAttr "golem_rigRN.phl[161]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[227].dn"
 		;
-connectAttr "golem_rigRN.phl[156]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[27].dn"
+connectAttr "golem_rigRN.phl[162]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[257].dn"
 		;
-connectAttr "golem_rigRN.phl[157]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[90].dn"
+connectAttr "golem_rigRN.phl[163]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[156].dn"
 		;
-connectAttr "golem_rigRN.phl[158]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[41].dn"
+connectAttr "golem_rigRN.phl[164]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[113].dn"
 		;
-connectAttr "golem_rigRN.phl[159]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[238].dn"
+connectAttr "golem_rigRN.phl[165]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[233].dn"
 		;
-connectAttr "golem_rigRN.phl[160]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[45].dn"
+connectAttr "golem_rigRN.phl[166]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[244].dn"
 		;
-connectAttr "golem_rigRN.phl[161]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[213].dn"
+connectAttr "golem_rigRN.phl[167]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[82].dn"
 		;
-connectAttr "golem_rigRN.phl[162]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[75].dn"
+connectAttr "golem_rigRN.phl[168]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[232].dn"
 		;
-connectAttr "golem_rigRN.phl[163]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[196].dn"
+connectAttr "golem_rigRN.phl[169]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[159].dn"
 		;
-connectAttr "golem_rigRN.phl[164]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[199].dn"
+connectAttr "golem_rigRN.phl[170]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[13].dn"
 		;
-connectAttr "golem_rigRN.phl[165]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[30].dn"
+connectAttr "golem_rigRN.phl[171]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[107].dn"
 		;
-connectAttr "golem_rigRN.phl[166]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[47].dn"
+connectAttr "golem_rigRN.phl[172]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[247].dn"
 		;
-connectAttr "golem_rigRN.phl[167]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[70].dn"
+connectAttr "golem_rigRN.phl[173]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[208].dn"
 		;
-connectAttr "golem_rigRN.phl[168]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[112].dn"
+connectAttr "golem_rigRN.phl[174]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[176].dn"
 		;
-connectAttr "golem_rigRN.phl[169]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[146].dn"
+connectAttr "golem_rigRN.phl[175]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[61].dn"
 		;
-connectAttr "golem_rigRN.phl[170]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[18].dn"
+connectAttr "golem_rigRN.phl[176]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[236].dn"
 		;
-connectAttr "golem_rigRN.phl[171]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[111].dn"
+connectAttr "golem_rigRN.phl[177]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[133].dn"
 		;
-connectAttr "golem_rigRN.phl[172]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[97].dn"
+connectAttr "golem_rigRN.phl[178]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[70].dn"
 		;
-connectAttr "golem_rigRN.phl[173]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[127].dn"
+connectAttr "golem_rigRN.phl[179]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[0].dn"
 		;
-connectAttr "golem_rigRN.phl[174]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[116].dn"
+connectAttr "golem_rigRN.phl[180]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[186].dn"
 		;
-connectAttr "golem_rigRN.phl[175]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[125].dn"
+connectAttr "golem_rigRN.phl[181]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[168].dn"
 		;
-connectAttr "golem_rigRN.phl[176]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[126].dn"
+connectAttr "golem_rigRN.phl[182]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[224].dn"
 		;
-connectAttr "golem_rigRN.phl[177]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[154].dn"
+connectAttr "golem_rigRN.phl[183]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[250].dn"
 		;
-connectAttr "golem_rigRN.phl[178]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[247].dn"
+connectAttr "golem_rigRN.phl[184]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[218].dn"
 		;
-connectAttr "golem_rigRN.phl[179]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[60].dn"
+connectAttr "golem_rigRN.phl[185]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[131].dn"
 		;
-connectAttr "golem_rigRN.phl[180]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[222].dn"
+connectAttr "golem_rigRN.phl[186]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[54].dn"
 		;
-connectAttr "golem_rigRN.phl[181]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[133].dn"
+connectAttr "golem_rigRN.phl[187]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[141].dn"
 		;
-connectAttr "golem_rigRN.phl[182]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[23].dn"
+connectAttr "golem_rigRN.phl[188]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[34].dn"
 		;
-connectAttr "golem_rigRN.phl[183]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[203].dn"
+connectAttr "golem_rigRN.phl[189]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[158].dn"
 		;
-connectAttr "golem_rigRN.phl[184]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[162].dn"
+connectAttr "golem_rigRN.phl[190]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[211].dn"
 		;
-connectAttr "golem_rigRN.phl[185]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[255].dn"
+connectAttr "golem_rigRN.phl[191]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[30].dn"
 		;
-connectAttr "golem_rigRN.phl[186]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[56].dn"
+connectAttr "golem_rigRN.phl[192]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[205].dn"
 		;
-connectAttr "golem_rigRN.phl[187]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[249].dn"
+connectAttr "golem_rigRN.phl[193]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[28].dn"
 		;
-connectAttr "golem_rigRN.phl[188]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[234].dn"
+connectAttr "golem_rigRN.phl[194]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[201].dn"
 		;
-connectAttr "golem_rigRN.phl[189]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[26].dn"
+connectAttr "golem_rigRN.phl[195]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[120].dn"
 		;
-connectAttr "golem_rigRN.phl[190]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[91].dn"
+connectAttr "golem_rigRN.phl[196]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[195].dn"
 		;
-connectAttr "golem_rigRN.phl[191]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[72].dn"
+connectAttr "golem_rigRN.phl[197]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[199].dn"
 		;
-connectAttr "golem_rigRN.phl[192]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[3].dn"
+connectAttr "golem_rigRN.phl[198]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[105].dn"
 		;
-connectAttr "golem_rigRN.phl[193]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[98].dn"
+connectAttr "golem_rigRN.phl[199]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[48].dn"
 		;
-connectAttr "golem_rigRN.phl[194]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[48].dn"
+connectAttr "golem_rigRN.phl[200]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[179].dn"
 		;
-connectAttr "golem_rigRN.phl[195]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[244].dn"
+connectAttr "golem_rigRN.phl[201]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[256].dn"
 		;
-connectAttr "golem_rigRN.phl[196]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[159].dn"
+connectAttr "golem_rigRN.phl[202]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[167].dn"
 		;
-connectAttr "golem_rigRN.phl[197]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[147].dn"
+connectAttr "golem_rigRN.phl[203]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[36].dn"
 		;
-connectAttr "golem_rigRN.phl[198]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[157].dn"
+connectAttr "golem_rigRN.phl[204]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[108].dn"
 		;
-connectAttr "golem_rigRN.phl[199]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[227].dn"
+connectAttr "golem_rigRN.phl[205]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[230].dn"
 		;
-connectAttr "golem_rigRN.phl[200]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[216].dn"
+connectAttr "golem_rigRN.phl[206]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[222].dn"
 		;
-connectAttr "golem_rigRN.phl[201]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[39].dn"
+connectAttr "golem_rigRN.phl[207]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[38].dn"
 		;
-connectAttr "golem_rigRN.phl[202]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[5].dn"
+connectAttr "golem_rigRN.phl[208]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[66].dn"
 		;
-connectAttr "golem_rigRN.phl[203]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[92].dn"
+connectAttr "golem_rigRN.phl[209]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[253].dn"
 		;
-connectAttr "golem_rigRN.phl[204]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[95].dn"
+connectAttr "golem_rigRN.phl[210]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[254].dn"
 		;
-connectAttr "golem_rigRN.phl[205]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[214].dn"
+connectAttr "golem_rigRN.phl[211]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[15].dn"
 		;
-connectAttr "golem_rigRN.phl[206]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[221].dn"
+connectAttr "golem_rigRN.phl[212]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[237].dn"
 		;
-connectAttr "golem_rigRN.phl[207]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[25].dn"
+connectAttr "golem_rigRN.phl[213]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[192].dn"
 		;
-connectAttr "golem_rigRN.phl[208]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[57].dn"
+connectAttr "golem_rigRN.phl[214]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[6].dn"
 		;
-connectAttr "golem_rigRN.phl[209]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[135].dn"
+connectAttr "golem_rigRN.phl[215]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[46].dn"
 		;
-connectAttr "golem_rigRN.phl[210]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[241].dn"
+connectAttr "golem_rigRN.phl[216]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[51].dn"
 		;
-connectAttr "golem_rigRN.phl[211]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[32].dn"
+connectAttr "golem_rigRN.phl[217]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[27].dn"
 		;
-connectAttr "golem_rigRN.phl[212]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[59].dn"
+connectAttr "golem_rigRN.phl[218]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[102].dn"
 		;
-connectAttr "golem_rigRN.phl[213]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[187].dn"
+connectAttr "golem_rigRN.phl[219]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[238].dn"
 		;
-connectAttr "golem_rigRN.phl[214]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[77].dn"
+connectAttr "golem_rigRN.phl[220]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[181].dn"
 		;
-connectAttr "golem_rigRN.phl[215]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[123].dn"
+connectAttr "golem_rigRN.phl[221]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[169].dn"
 		;
-connectAttr "golem_rigRN.phl[216]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[141].dn"
+connectAttr "golem_rigRN.phl[222]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[197].dn"
 		;
-connectAttr "golem_rigRN.phl[217]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[58].dn"
+connectAttr "golem_rigRN.phl[223]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[33].dn"
 		;
-connectAttr "golem_rigRN.phl[218]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[0].dn"
+connectAttr "golem_rigRN.phl[224]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[85].dn"
 		;
-connectAttr "golem_rigRN.phl[219]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[168].dn"
+connectAttr "golem_rigRN.phl[225]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[225].dn"
 		;
-connectAttr "golem_rigRN.phl[220]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[137].dn"
+connectAttr "golem_rigRN.phl[226]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[139].dn"
 		;
-connectAttr "golem_rigRN.phl[221]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[76].dn"
+connectAttr "golem_rigRN.phl[227]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[125].dn"
 		;
-connectAttr "golem_rigRN.phl[222]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[20].dn"
+connectAttr "golem_rigRN.phl[228]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[187].dn"
 		;
-connectAttr "golem_rigRN.phl[223]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[2].dn"
+connectAttr "golem_rigRN.phl[229]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[215].dn"
 		;
-connectAttr "golem_rigRN.phl[224]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[134].dn"
+connectAttr "golem_rigRN.phl[230]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[248].dn"
 		;
-connectAttr "golem_rigRN.phl[225]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[73].dn"
+connectAttr "golem_rigRN.phl[231]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[172].dn"
 		;
-connectAttr "golem_rigRN.phl[226]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[233].dn"
+connectAttr "golem_rigRN.phl[232]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[240].dn"
 		;
-connectAttr "golem_rigRN.phl[227]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[242].dn"
+connectAttr "golem_rigRN.phl[233]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[19].dn"
 		;
-connectAttr "golem_rigRN.phl[228]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[206].dn"
+connectAttr "golem_rigRN.phl[234]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[147].dn"
 		;
-connectAttr "golem_rigRN.phl[229]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[173].dn"
+connectAttr "golem_rigRN.phl[235]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[217].dn"
 		;
-connectAttr "golem_rigRN.phl[230]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[156].dn"
+connectAttr "golem_rigRN.phl[236]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[210].dn"
 		;
-connectAttr "golem_rigRN.phl[231]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[190].dn"
+connectAttr "golem_rigRN.phl[237]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[128].dn"
 		;
-connectAttr "golem_rigRN.phl[232]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[165].dn"
+connectAttr "golem_rigRN.phl[238]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[32].dn"
 		;
-connectAttr "golem_rigRN.phl[233]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[84].dn"
+connectAttr "golem_rigRN.phl[239]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[96].dn"
 		;
-connectAttr "golem_rigRN.phl[234]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[211].dn"
+connectAttr "golem_rigRN.phl[240]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[153].dn"
 		;
-connectAttr "golem_rigRN.phl[235]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[31].dn"
+connectAttr "golem_rigRN.phl[241]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[196].dn"
 		;
-connectAttr "golem_rigRN.phl[236]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[54].dn"
+connectAttr "golem_rigRN.phl[242]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[68].dn"
 		;
-connectAttr "golem_rigRN.phl[237]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[102].dn"
+connectAttr "golem_rigRN.phl[243]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[231].dn"
 		;
-connectAttr "golem_rigRN.phl[238]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[225].dn"
+connectAttr "golem_rigRN.phl[244]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[138].dn"
 		;
-connectAttr "golem_rigRN.phl[239]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[245].dn"
+connectAttr "golem_rigRN.phl[245]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[206].dn"
 		;
-connectAttr "golem_rigRN.phl[240]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[232].dn"
+connectAttr "golem_rigRN.phl[246]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[104].dn"
 		;
-connectAttr "golem_rigRN.phl[241]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[160].dn"
+connectAttr "golem_rigRN.phl[247]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[17].dn"
 		;
-connectAttr "golem_rigRN.phl[242]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[257].dn"
+connectAttr "golem_rigRN.phl[248]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[92].dn"
 		;
-connectAttr "golem_rigRN.phl[243]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[83].dn"
+connectAttr "golem_rigRN.phl[249]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[143].dn"
 		;
-connectAttr "golem_rigRN.phl[244]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[237].dn"
+connectAttr "golem_rigRN.phl[250]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[150].dn"
 		;
-connectAttr "golem_rigRN.phl[245]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[107].dn"
+connectAttr "golem_rigRN.phl[251]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[45].dn"
 		;
-connectAttr "golem_rigRN.phl[246]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[166].dn"
+connectAttr "golem_rigRN.phl[252]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[214].dn"
 		;
-connectAttr "golem_rigRN.phl[247]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[200].dn"
+connectAttr "golem_rigRN.phl[253]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[20].dn"
 		;
-connectAttr "golem_rigRN.phl[248]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[8].dn"
+connectAttr "golem_rigRN.phl[254]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[241].dn"
 		;
-connectAttr "golem_rigRN.phl[249]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[101].dn"
+connectAttr "golem_rigRN.phl[255]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[126].dn"
 		;
-connectAttr "golem_rigRN.phl[250]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[69].dn"
+connectAttr "golem_rigRN.phl[256]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[175].dn"
 		;
-connectAttr "golem_rigRN.phl[251]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[118].dn"
+connectAttr "golem_rigRN.phl[257]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[124].dn"
 		;
-connectAttr "golem_rigRN.phl[252]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[138].dn"
+connectAttr "golem_rigRN.phl[258]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[123].dn"
 		;
-connectAttr "golem_rigRN.phl[253]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[226].dn"
+connectAttr "golem_rigRN.phl[259]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[65].dn"
 		;
-connectAttr "golem_rigRN.phl[254]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[9].dn"
+connectAttr "golem_rigRN.phl[260]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[8].dn"
 		;
-connectAttr "golem_rigRN.phl[255]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[192].dn"
+connectAttr "golem_rigRN.phl[261]" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[121].dn"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -2604,28 +2783,40 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "uiConfigurationScriptNode.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[12].dn"
+connectAttr "golem_handB_ctrl_L_rotateZ.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[9].dn"
 		;
-connectAttr "golem_arm_ctrlFK_L_translateX.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[37].dn"
+connectAttr "golem_arm_ctrlFK_L_translateX.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[31].dn"
 		;
-connectAttr "golem_arm_ctrlFK_L_rotateX.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[49].dn"
+connectAttr "sceneConfigurationScriptNode.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[35].dn"
 		;
-connectAttr "golem_handB_ctrl_L_rotateY.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[80].dn"
+connectAttr "golem_handB_ctrl_L_translateX.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[97].dn"
 		;
-connectAttr "sceneConfigurationScriptNode.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[89].dn"
+connectAttr "uiConfigurationScriptNode.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[101].dn"
 		;
-connectAttr "golem_arm_ctrlFK_L_translateY.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[122].dn"
+connectAttr "golem_arm_ctrlFK_L_translateZ.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[149].dn"
 		;
-connectAttr "golem_arm_ctrlFK_L_translateZ.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[158].dn"
+connectAttr "golem_arm_ctrlFK_L_translateY.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[162].dn"
 		;
-connectAttr "golem_arm_ctrlFK_L_rotateZ.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[174].dn"
+connectAttr "golem_arm_ctrlFK_L_rotateX.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[171].dn"
 		;
-connectAttr "golem_rigRN.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[191].dn";
-connectAttr "golem_handB_ctrl_L_rotateZ.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[195].dn"
+connectAttr "golem_rigRN.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[184].dn";
+connectAttr "golem_handB_ctrl_L_rotateY.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[194].dn"
 		;
-connectAttr "golem_handB_ctrl_L_translateX.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[201].dn"
+connectAttr "golem_arm_ctrlFK_L_rotateY.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[212].dn"
 		;
-connectAttr "golem_arm_ctrlFK_L_rotateY.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[256].dn"
+connectAttr "golem_arm_ctrlFK_L_rotateZ.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[234].dn"
+		;
+connectAttr "golem_arm_ctrlFK_R_translateX.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[258].dn"
+		;
+connectAttr "golem_arm_ctrlFK_R_translateY.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[259].dn"
+		;
+connectAttr "golem_arm_ctrlFK_R_translateZ.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[260].dn"
+		;
+connectAttr "golem_arm_ctrlFK_R_rotateX.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[261].dn"
+		;
+connectAttr "golem_arm_ctrlFK_R_rotateY.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[262].dn"
+		;
+connectAttr "golem_arm_ctrlFK_R_rotateZ.msg" "MayaNodeEditorSavedTabsInfo2.tgi[0].ni[263].dn"
 		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of golem_dance_L.ma
+// End of golem_dance_LR.ma
